@@ -8,4 +8,3 @@
 
 [komentorivi.txt](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/viikko1/komentorivi.txt)
 
-muutos tehtävää 17 varten
