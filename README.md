@@ -8,3 +8,6 @@
 
 [komentorivi.txt](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/viikko1/komentorivi.txt)
 
+### *Viikko 2*
+
+[kattavuustesti](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/laskarit/viikko2/kattavuustesti.png)
