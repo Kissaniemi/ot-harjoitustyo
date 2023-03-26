@@ -17,4 +17,4 @@
 
 [vaatimusmaarittely.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/vaatimusmaarittely.md)
 
-[tyoaikakirjanpito.md]()
+[tyoaikakirjanpito.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/tyoaikakirjanpito.md)
