@@ -11,3 +11,10 @@
 ### *Viikko 2*
 
 [kattavuustesti](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/laskarit/viikko2/kattavuustesti.png)
+
+
+## **Sovellusprojekti**  
+
+[vaatimusmaarittely.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/vaatimusmaarittely.md)
+
+[tyoaikakirjanpito.md]()
