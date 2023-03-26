@@ -10,6 +10,7 @@ pystyä luomaan myös käyttäjätili ja tallentamaan huoneita käyttäjätilill
 
 ![esimerkkikuva]
 (https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/esimerkkikuva.png)
+
 <sub>Karkea esimerkkikuva ideasta</sub>
 
 ## Sovelluksen perustoiminnallisuus
