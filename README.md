@@ -1,20 +1,18 @@
 # Ohjelmistotekniikka, harjoitustyö
 
-## **Tehtävät**  
+## **RoomPlanner**
 
-### *Viikko 1*
+Sovelluksella pystyy luomaan yksinkertaisia huone ja huonekaluobjekteja cm mittojen mukaan. 
 
-[gitlog.txt](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
+Kyseesä on tekijän ensimmäinen sovellusprojekti.  
 
-[komentorivi.txt](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
+### **Dokumentaatio** 
 
-### *Viikko 2*
+- [vaatimusmaarittely.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/vaatimusmaarittely.md)
+- [tyoaikakirjanpito.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/tyoaikakirjanpito.md)
+- [changelog.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/changelog.md)
 
-[kattavuustesti](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/laskarit/viikko2/kattavuustesti.png)
 
-
-## **Sovellusprojekti**  
-
-[vaatimusmaarittely.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/vaatimusmaarittely.md)
-
-[tyoaikakirjanpito.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/tyoaikakirjanpito.md)
+### Koodilähteet:
+ Aikaisemmin Tkinteriä käyttämättömänä suuri apu projektia tehdessä on ollut Youtubesta Codemy.com käyttäjän videosarja [Python GUI's With Tkinter](https://www.youtube.com/watch?v=yQSEXcf6s2I&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV)
+ jonka oppien yhdistelmiin lähes kaikki viikko 3:n mennessä luoto koodi perustuu, varsinkin UI:n kohdalla. 
