@@ -2,8 +2,6 @@ import tkinter as tk
 from tkinter import Entry
 from RoomPlanner import UI, Rectangle
 import unittest
-from unittest import main
-
 
 class TestUI(unittest.TestCase):
 
