@@ -12,4 +12,5 @@ Kyseessä on tekijän ensimmäinen sovellusprojekti.
 - [tyoaikakirjanpito.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/tyoaikakirjanpito.md)
 - [changelog.md](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/changelog.md)
 - [arkkitehtuurikuvaus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/luokkakaavio.jpg)
-- [koodilähteet]()
+- [koodilähteet](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/koodin_lahteet_ideat.md)
+

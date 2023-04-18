@@ -15,7 +15,7 @@ Idea: Stackoverflow [how to select multiple objects with mouse in tkinter python
 
 #### #checkbox to toggle names on/off
 Idea: Codemy [Checkboxes With TKinter - Python Tkinter GUI Tutorial #17](https://www.youtube.com/watch?v=4IsLwwb_yDs)
- TkDocs [Basic Widgets - Checkbutton] (https://tkdocs.com/tutorial/widgets.html#checkbutton)
+ TkDocs [Basic Widgets - Checkbutton](https://tkdocs.com/tutorial/widgets.html#checkbutton)
  Stackoverflow [How to hide and show canvas items on tkinter?](https://stackoverflow.com/questions/53499669/how-to-hide-and-show-canvas-items-on-tkinter)
 
 #### #Find the clicked rectangle and text related to it / # Move the selected rectangle with the mouse
@@ -38,6 +38,6 @@ Idea suorakulmio-objektin luontiin luontiin: Codemy[How to Draw Lines and Shapes
 Idea teksti-objektin luontiin: TkDocs [Canvas- Item Types - Text](https://tkdocs.com/tutorial/canvas.html)
 
 #### Tagien hyödyntäminen:
-Idea:  TkDocs [Canvas - Tags] (https://tkdocs.com/tutorial/canvas.html)
+Idea:  TkDocs [Canvas - Tags](https://tkdocs.com/tutorial/canvas.html)
 TkDocs [Text- Differences between Tags in Canvas and Text Widgets](https://tkdocs.com/tutorial/text.html)
 
