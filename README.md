@@ -2,9 +2,9 @@
 
 ## **RoomPlanner**
 
-Sovelluksella pystyy luomaan yksinkertaisia huone ja huonekaluobjekteja cm mittojen mukaan. 
+Sovelluksella pystyy luomaan yksinkertaisia huone ja huonekaluobjekteja mittojen mukaan. 
 
-Kyseesä on tekijän ensimmäinen sovellusprojekti.  
+Kyseessä on tekijän ensimmäinen sovellusprojekti.  
 
 ### **Dokumentaatio** 
 
