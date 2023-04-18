@@ -14,23 +14,26 @@ pystyä luomaan myös käyttäjätili ja tallentamaan huoneita käyttäjätilill
 
 ## Sovelluksen perustoiminnallisuus
 
-### Käyttäjä voi luoda huonepohjia 
 
-  - Alustavasti luotu huone voi olla vain suorakulmion mallinen
-  - Huoneelle joko annetaan kirjallisesti mitat ja/tai huoneen kokoa pystyy muuttamaan vetämällä
-  - Huoneen voi nimetä
-  - Huoneen voi tallentaa
-  - Tallennetun huoneen voi hakea
+Tehty merkinnät sillä huomautuksella että sovelluksen huonepohjien ja huonekalujen luomista ei ole vielä eritelty omikseen,
+vaan tapahtuvat saman "Create Rectangle" napin kautta. Tarkoitus vielä eriyttää niin että huonepohjat pysyvät aina 
+huonekalujen takana canvasilla.
+### Käyttäjä voi luoda huonepohjia 
+Tehty  - Alustavasti luotu huone voi olla vain suorakulmion mallinen
+Tehty  - Huoneelle joko annetaan kirjallisesti mitat ja/tai huoneen kokoa pystyy muuttamaan vetämällä
+Tehty  - Huoneen voi nimetä
+Tehty  - Huoneen voi tallentaa
+Tehty  - Tallennetun huoneen voi hakea
   - Tallennetun huoneen voi poistaa  
   - Luodun huoneen koolla on rajat
   
 ### Käyttäjä voi lisätä huonepohjaan huonekaluja
  
-  - Alustavasti luotu huonekalu on vain suorakulmion mallinen
-  - Huonekalulle joko annetaan kirjallisesti mitat ja/tai huonekalun kokoa pystyy muuttamaan vetämällä
-  - Huonekalun voi nimetä
-  - Huonekalua voi liikuttaa
-  - Huonekalun voi tallentaa huoneen tallennuksen yhteydessä
+Tehty  - Alustavasti luotu huonekalu on vain suorakulmion mallinen
+Tehty  - Huonekalulle joko annetaan kirjallisesti mitat ja/tai huonekalun kokoa pystyy muuttamaan vetämällä
+Tehty  - Huonekalun voi nimetä
+Tehty  - Huonekalua voi liikuttaa
+Tehty  - Huonekalun voi tallentaa huoneen tallennuksen yhteydessä
   - Luodun huonekalun koolla on rajat
  
 ## Sovelluksen jatkokehitys
