@@ -27,6 +27,7 @@ Tehty:
  - Huoneen voi nimetä
  - Huoneen voi tallentaa
  - Tallennetun huoneen voi hakea
+
 Tekemättä:
  - Tallennetun huoneen voi poistaa  
  - Luodun huoneen koolla on rajat
@@ -39,6 +40,7 @@ Tehty:
  - Huonekalun voi nimetä
  - Huonekalua voi liikuttaa
  - Huonekalun voi tallentaa huoneen tallennuksen yhteydessä
+
 Tekemättä:
  - Luodun huonekalun koolla on rajat
  
