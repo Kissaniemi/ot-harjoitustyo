@@ -17,7 +17,7 @@ Kyseessä on tekijän ensimmäinen sovellusprojekti.
 - [arkkitehtuurikuvaus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/arkkitehtuuri.md)
 - [koodilähteet](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/koodin_lahteet_ideat.md)
 
-# Tähän linkki releaseen
+# [Ohjelman release](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Ohjelman käynnistys
 
