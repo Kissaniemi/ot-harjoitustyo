@@ -25,10 +25,6 @@ Kyseessä on tekijän ensimmäinen sovellusprojekti.
 
 poetry install
 
-### Suorita alustustoimenpiteet:
-
-poetry run invoke build
-
 ### Käynnistä ohjelma:
 
 poetry run invoke start
