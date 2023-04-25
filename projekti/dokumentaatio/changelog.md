@@ -68,3 +68,23 @@
 - Useamman tallennuksen tekeminen
 - Tallennuksen poistaminen
 - Jo luodun suorakulmion koon/nimen muuttaminen
+
+
+### Viikko 5
+
+## Muutokset:
+
+- Lisätty ovaalin muodon lisäys, eriytetty huoneen(menee aina canvasilla muiden
+ objektien taaks ja suorakulmion lisäys ja muutettu Rectangle-luokka
+ Shape-luokaksi kuvaamaan paremmin luokan toimintaa
+- Lisätty tuplaklikkaus ja siihen liitetty popup ikkuna jonka kautta voi muuttaa 
+ jo olemassa olevan objektin nimeä/kokoa
+- Siirretty delete (rectangle) nappi kaksoisklikkauksen avaamaan ikkunaan
+- Eriytetty koodia enemmän ja muutettu pakkausrakennetta ja samalla korjattu/muutettu 
+poistettu yksittäisiä asioita ns. siistitty koodia
+- Korjattu ja lisätty testejä 
+
+## Seuraavaksi to do-listalla
+- useamman tallennuksen tekeminen ja tallennuksen poistaminen
+- valmiin muoto-objektin kopiointi
+- muoto-objektin kääntö

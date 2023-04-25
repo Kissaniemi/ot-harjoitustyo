@@ -90,4 +90,46 @@
 #### Käytetty aika:
 - 6h
 
-## Yhteensä käytetty aika: 47h
+### päiväys 22.4.2023
+
+#### Tehty: 
+- lisätty ovaalin muodon lisäys
+- muutettu rectangle-luokka shape-luokaksi
+- lisätty shape-luokkaan "huone" versio suorakulmiosta joka menee aina muiden objektien taakse
+- aloitettu tuplaklikkauksella koon/nimen muutto
+
+#### Käytetty aika:
+- 6h
+
+### päiväys 23.4.2023
+
+#### Tehty:
+- viimeistelty tuplaklikkaus ja koon/nimen muutos
+- siirretty tuplaklikkauksen avaamaan ikkunaan delete(rectangle)
+- järjestelty koodia paremmin, muutettu pakkaustapaa
+
+#### Käytetty aika:
+- 5h
+
+### päiväys 24.4.2023
+
+#### Tehty:
+- järjestelty koodia paremmin, muutettu pakkaustapaa
+- siistitty koodia
+- testien tekemistä
+
+#### Käytetty aika:
+- 7h 
+
+### päiväys 25.4.2023
+
+#### Tehty:
+- lisää koodin uudelleen järjestelyä
+- lisää testien tekemistä (eivät vieläkään toimi)
+- dokumentaatio
+
+#### Käytetty aika:
+- 7h
+
+## Yhteensä käytetty aika: 72h
+

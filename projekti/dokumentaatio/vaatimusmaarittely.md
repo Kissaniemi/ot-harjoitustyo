@@ -14,16 +14,11 @@ pystyä luomaan myös käyttäjätili ja tallentamaan huoneita käyttäjätilill
 
 ## Sovelluksen perustoiminnallisuus
 
-
-Tehty merkinnät sillä huomautuksella että sovelluksen huonepohjien ja huonekalujen luomista ei ole vielä eritelty omikseen,
-vaan tapahtuvat saman "Create Rectangle" napin kautta. Tarkoitus vielä eriyttää niin että huonepohjat pysyvät aina 
-huonekalujen takana canvasilla.
-
 ### Käyttäjä voi luoda huonepohjia
 
 Tehty: 
  - Alustavasti luotu huone voi olla vain suorakulmion mallinen
- - Huoneelle joko annetaan kirjallisesti mitat ja/tai huoneen kokoa pystyy muuttamaan vetämällä
+ - Huoneelle annetaan kirjallisesti mitat
  - Huoneen voi nimetä
  - Huoneen voi tallentaa
  - Tallennetun huoneen voi hakea
@@ -36,7 +31,7 @@ Tekemättä:
 
 Tehty: 
  - Alustavasti luotu huonekalu on vain suorakulmion mallinen
- - Huonekalulle joko annetaan kirjallisesti mitat ja/tai huonekalun kokoa pystyy muuttamaan vetämällä
+ - Huonekalulle annetaan kirjallisesti mitat
  - Huonekalun voi nimetä
  - Huonekalua voi liikuttaa
  - Huonekalun voi tallentaa huoneen tallennuksen yhteydessä
@@ -45,12 +40,14 @@ Tekemättä:
  - Luodun huonekalun koolla on rajat
  
 ## Sovelluksen jatkokehitys
-  
- Perustoiminnan jälkeen täydennettäviä ominaisuuksia 
- 
-   - Luotu huonekalu voi olla ympyrän tai L-muotoinen
-   - Luotua huonekalua voi kiertää (L-muotoinen huonekalu)  
-   - Luotuja huoneita voi yhdistää isommaksi huoneiden kokonaisuudeksi (ns. koko asunnon pohja)
-   - Luodaan valmiita huonekaluobjekteja joita voidaan käyttää   
+ Tehty:
+ - Luotu huonekalu voi olla ympyrän/ovaalin muotoinen
+ - Valmiin huonekalun kokoa/nimeä voi muuttaa
+
+ Perustoiminnan jälkeen täydennettäviä ominaisuuksia:
+   - laajennetaan tallennusta
+   - kopioi olemassa oleva objekti  
+   - Luotu huonekalu voi olla L-muotoinen
+   - Luotua huonekalua voi kiertää 
    - Zoomaus in/out 
    - Käyttäjätili
