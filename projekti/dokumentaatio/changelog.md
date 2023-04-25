@@ -82,9 +82,11 @@
 - Siirretty delete (rectangle) nappi kaksoisklikkauksen avaamaan ikkunaan
 - Eriytetty koodia enemmän ja muutettu pakkausrakennetta ja samalla korjattu/muutettu 
 poistettu yksittäisiä asioita ns. siistitty koodia
-- Korjattu ja lisätty testejä 
+- Korjattu/poistettu testejä, koska eivät toimi 
 
 ## Seuraavaksi to do-listalla
+- Testien korjaus
+- Koodin jäsentelyn korjaus
 - useamman tallennuksen tekeminen ja tallennuksen poistaminen
 - valmiin muoto-objektin kopiointi
 - muoto-objektin kääntö

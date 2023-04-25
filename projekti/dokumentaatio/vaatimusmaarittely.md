@@ -22,10 +22,10 @@ Tehty:
  - Huoneen voi nimetä
  - Huoneen voi tallentaa
  - Tallennetun huoneen voi hakea
+ - Luodun huoneen koolla on rajat
 
 Tekemättä:
- - Tallennetun huoneen voi poistaa  
- - Luodun huoneen koolla on rajat
+ - Tallennetun huoneen voi poistaa
   
 ### Käyttäjä voi lisätä huonepohjaan huonekaluja
 
@@ -35,8 +35,6 @@ Tehty:
  - Huonekalun voi nimetä
  - Huonekalua voi liikuttaa
  - Huonekalun voi tallentaa huoneen tallennuksen yhteydessä
-
-Tekemättä:
  - Luodun huonekalun koolla on rajat
  
 ## Sovelluksen jatkokehitys
@@ -49,5 +47,4 @@ Tekemättä:
    - kopioi olemassa oleva objekti  
    - Luotu huonekalu voi olla L-muotoinen
    - Luotua huonekalua voi kiertää 
-   - Zoomaus in/out 
-   - Käyttäjätili
+   - Zoomaus in/out

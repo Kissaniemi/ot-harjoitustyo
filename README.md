@@ -21,15 +21,15 @@ Kyseessä on tekijän ensimmäinen sovellusprojekti.
 
 ## Ohjelman käynnistys
 
- Asenna ensin ohjelman riippuvuudet:
+### Asenna ensin ohjelman riippuvuudet:
 
 poetry install
 
- Suorita alustustoimenpiteet:
+### Suorita alustustoimenpiteet:
 
 poetry run invoke build
 
-Käynnistä ohjelma:
+### Käynnistä ohjelma:
 
 poetry run invoke start
 
