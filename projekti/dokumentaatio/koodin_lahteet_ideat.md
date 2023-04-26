@@ -5,7 +5,7 @@ Aluksi hyödynnetty myös kurssin ohjelmistotekniikka [TkInter ja graafisen käy
 
 Yleisesti koodia tehdessä käytetty apuna [tkinter - Python interface to Tcl/Tk](https://docs.python.org/3/library/tkinter.html#module-tkinter) sekä erityisesti [TkDocs- Tutorial](https://tkdocs.com/tutorial/index.html) sivustoa yksittäisten tkinterin toimintojen opetteluun ja hyödyntämiseen.
 
-### Tarkemmat viikko 4 mennessä tehdyn koodin lähteet koodin mukaisessa järjestyksessä ylhäältä alas:
+### Tarkemmat viikko 4 mennessä tehdyn koodin lähteet:
 
 #### # Creates a canvas on top of the right_frame for the rectangles
 Idea: Codemy [How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68](https://www.youtube.com/watch?v=HrK9Kmz3_9A&t=346s)
