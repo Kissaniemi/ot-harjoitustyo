@@ -5,36 +5,29 @@ joka vastaa muodon luonnista canvasille
  """
 
 class Shape:
-    def __init__(self, canvas):
+    def __init__(self, canvas, width, height, text, shape_type, top_left_x=50, top_left_y=50):
         self.canvas = canvas
-        self.width = None
-        self.height = None
-        self.id = None
-        self.text = None
-        self.text_id = None
-        self.shape = None
-        self.top_left_x = None
-        self.top_left_y = None
-           
-    def create_shape(self, width, height, text, shape_type, top_left_x=50, top_left_y=50):
         self.width = width
         self.height = height
+        self._id = None
         self.text = text
+        self._text_id = None
         self.shape = shape_type
         self.top_left_x = top_left_x
         self.top_left_y = top_left_y
 
-        if self.shape == "rectangle":
+    def create_shape(self, shape):
+        if shape == "rectangle":
             self.create_rectangle()
 
-        elif self.shape == "oval":
+        elif shape == "oval":
             self.create_oval()
 
         else:
             self.create_room()
-    
+
     def create_rectangle(self):
-        self.id = self.canvas.create_rectangle(
+        self._id = self.canvas.create_rectangle(
             self.top_left_x, self.top_left_y,
             self.width+self.top_left_x,
             self.height+self.top_left_y,
@@ -45,7 +38,7 @@ class Shape:
         self.create_text()
 
     def create_oval(self):
-        self.id = self.canvas.create_oval(
+        self._id = self.canvas.create_oval(
             self.top_left_x, self.top_left_y,
             self.width+self.top_left_x,
             self.height+self.top_left_y,
@@ -56,7 +49,7 @@ class Shape:
         self.create_text()
 
     def create_room(self):
-        self.id = self.canvas.create_rectangle(
+        self._id = self.canvas.create_rectangle(
             self.top_left_x, self.top_left_y,
             self.width+self.top_left_x,
             self.height+self.top_left_y,
@@ -64,11 +57,11 @@ class Shape:
             tags=("room", "shape"),
             width=2
         )
-        self.canvas.lower(self.id)
+        self.canvas.lower(self._id)
         self.create_text()
 
     def create_text(self):
-        self.text_id = self.canvas.create_text(
+        self._text_id = self.canvas.create_text(
             (self.width)/2+self.top_left_x,
             self.height+10+self.top_left_y,
             text=self.text,
@@ -76,12 +69,37 @@ class Shape:
             font=("Arial"),
             tags="text"
         )
- 
-   
-    def rotate_shape(self):
-        self.width, self.height = self.height, self.width
 
-    def duplicate_shape(self):
-        pass
+    def change_text(self, text):
+        self.text = text
 
+    def change_width(self, width):
+        self.width = width
 
+    def change_height(self, height):
+        self.height = height
+
+    def change_coordinates(self, new_x, new_y):
+        self.top_left_x = new_x
+        self.top_left_y = new_y
+
+    def get_width(self):
+        return self.width
+
+    def get_height(self):
+        return self.height
+
+    def get_id(self):
+        return self._id
+
+    def get_text(self):
+        return self.text
+
+    def get_text_id(self):
+        return self._text_id
+
+    def get_shape(self):
+        return self.shape
+
+    def get_coordinates(self):
+        return (self.top_left_x, self.top_left_y)

@@ -47,6 +47,11 @@ class PopUp():
         self.new_name_entry.insert(0, name)
         self.new_name_entry.pack(side=tk.TOP, padx=10, pady=5)
 
+        #rotate_button = tk.Button(self.pop, text="Rotate",
+                                 # command=self.eventhandler.rotate()
+          #                        )
+        #rotate_button.pack(side=tk.RIGHT, padx=20, pady=10)
+
         change_button = tk.Button(self.pop, text="OK",
                                   command=lambda: (self.eventhandler.change_shape(
                                       float(self.new_width_entry.get()),

@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox, constants
+from tkinter.simpledialog import askstring
+from tkinter.messagebox import showinfo
 
 from ui.ui_control import Control
 from file_handler.save_load import SaveHandler
@@ -128,21 +130,44 @@ class View():
             self._canvas.itemconfigure("text", state="normal")
 
     def save_popup(self):
-        response = messagebox.askyesno("", "Do you want to save?")
-        if response == 1:
-            self._save_handler.save(self._canvas)
-        pass
+        savefile = askstring("", "Enter file name you want to save to")
+        if savefile == "":
+            self.save_error()
+        elif savefile == None:
+            return
+        else:
+            self._save_handler.save(self._canvas, savefile)
 
+    def save_error(self):     
+        savefile = askstring("", "Please enter a file name to save to")
+        if savefile == "":
+            self.enter_name()
+        elif savefile == None:
+            return
+        else:
+            self._save_handler.save(self._canvas, savefile)   
+    
     def load_popup(self):
-        response = messagebox.askyesno("", "Do you want to load last save?")
-        if response == 1:
-            self._event_handler._clear_canvas()
-            self._save_handler.load(self._canvas)
-        pass
+        loadfile = askstring("", "Enter name of the file you want to load from")
+        if loadfile == "":
+            self.load_error()
+        elif loadfile == None:
+            return
+        else:
+            self._save_handler.load(self._canvas, loadfile) 
+
+    def load_error(self):     
+        loadfile = askstring("", "Please enter a file name to load from")
+        if loadfile == "":
+            self.load_error()
+        elif loadfile == None:
+            return
+        else:
+            self._save_handler.load(self._canvas, loadfile)  
 
     def exit_popup(self):
         response = messagebox.askyesno(
-            "", "Are you sure you want to exit program?")
+            "", "Are you sure you want to exit the program?")
         if response == 1:
             self._event_handler._exit()
         pass
