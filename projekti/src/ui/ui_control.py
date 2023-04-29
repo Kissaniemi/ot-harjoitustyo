@@ -12,6 +12,7 @@ class Control():
         self._ui = ui
         self._canvas = canvas
         self._error_label = error_label
+        self._shape = Shape(self._canvas)
 
         self._canvas.bind("<ButtonPress-1>",
                           self.click_move)
@@ -79,8 +80,7 @@ class Control():
                     text="Width and height must be less than 2000!", bg="lightgray")
                 return
 
-            shape = Shape(width, height, text, shape_type)
-            shape.create_shape(self._canvas)
+            self._shape.create_shape(width, height, text, shape_type)
             self._error_label.config(text="", bg="gray")
 
         except ValueError:
