@@ -1,5 +1,5 @@
 
-class Shape:
+class Shape():
     """
 Shape-luokka johon talletetaan canvasilla olevien muotojen tiedot ja
 joka vastaa muodon luonnista canvasille

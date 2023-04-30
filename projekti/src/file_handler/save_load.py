@@ -1,4 +1,3 @@
-from tkinter import messagebox
 import json
 import os
 
@@ -59,6 +58,5 @@ Luokka joka vastaa tallentamisesta ja latauksesta
         if os.path.exists(f"{filename}.json"):
             os.remove(f"{filename}.json")
             return True
-        else:
-            return False
 
+        return False
