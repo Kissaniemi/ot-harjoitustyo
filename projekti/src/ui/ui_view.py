@@ -141,7 +141,7 @@ class View():
         elif filename == None:
             return
         else:
-            self._save_handler.get_data(self._canvas, filename)
+            self.save_confirm(filename) 
 
     def save_error(self):     
         filename = askstring("", "Please enter file name to save to")
@@ -150,8 +150,16 @@ class View():
         elif filename == None:
             return
         else:
-            self._save_handler.get_data(self._canvas, filename)   
+            self.save_confirm(filename) 
     
+    def save_confirm(self, filename):
+        self._save_handler.get_data(self._canvas)
+        ask = self._save_handler.save(filename)
+        if ask == True:
+            messagebox.showinfo("Save", f"The file has been saved to '{filename}'.")
+        else: 
+            messagebox.showinfo("Error", "Couldn't save to file.")
+
     def load_popup(self):
         filename = askstring("", "Enter file name to load from")
         if filename == "":
@@ -159,7 +167,7 @@ class View():
         elif filename== None:
             return
         else:
-            self._save_handler.load(self._canvas, filename) 
+            self.load_confirm(filename)
 
     def load_error(self):     
         filename = askstring("", "Please enter file name to load from")
@@ -168,7 +176,15 @@ class View():
         elif filename == None:
             return
         else:
-            self._save_handler.load(self._canvas, filename)  
+            self.load_confirm(filename)
+
+    def load_confirm(self, filename):
+        ask = self._save_handler.load(filename)
+        if ask == True:
+            self._event_handler._clear_canvas()
+            self._save_handler.unload_data(self._canvas)
+        else:
+            messagebox.showerror("Error", f"Filename '{filename}' not found.")
 
     def delete_file_popup(self):
         filename = askstring("", "Enter file name to delete")
@@ -186,11 +202,19 @@ class View():
         elif filename == None:
             return
         else:
-            self._save_handler.delete_data(filename)
-                                                   
+            self.delete_confirm(filename)
+
+    def delete_confirm(self, filename):
+        ask = self._save_handler.delete_data(filename)
+        if ask == True:
+            messagebox.showinfo("", f"Filename '{filename}' has been deleted.")
+        else:
+            messagebox.showerror("Error", f"Filename '{filename}' not found")
+
     def exit_popup(self):
         response = messagebox.askyesno(
             "", "Are you sure you want to exit the program?")
         if response == 1:
             self._event_handler._exit()
-        pass
+        else:
+            return

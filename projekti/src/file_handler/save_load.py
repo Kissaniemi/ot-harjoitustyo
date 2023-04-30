@@ -12,7 +12,8 @@ Luokka joka vastaa tallentamisesta ja latauksesta
     def __init__(self):
         self.data = {"shapes": []}
 
-    def get_data(self, canvas, filename):
+    def get_data(self, canvas):
+        self.data = {"shapes": []}
 
         shapes = canvas.find_withtag("shape")
 
@@ -32,33 +33,32 @@ Luokka joka vastaa tallentamisesta ja latauksesta
                 "shape": tags[0]
             })
 
-        self.save(filename)
-
     def save(self, filename):
 
         with open(f"{filename}.json", "w", encoding="utf-8") as file:
             json.dump(self.data, file, indent=2)
 
-        messagebox.showinfo("Save", f"The file has been saved to '{filename}'.")
+        return True
 
-    def load(self, canvas, filename):
+    def load(self, filename):
         try:
             with open(f"{filename}.json", "r", encoding="utf-8") as file:
-                data = json.load(file)
-                self.unload_data(canvas, data)
+                self.data = json.load(file)
+            return True
 
         except FileNotFoundError:
-            messagebox.showerror("Error", f"Filename '{filename}' not found.")
+            return False
 
-    def unload_data(self, canvas, data):
-        for state in data["shapes"]:
-                shape = Shape(canvas, state["width"], state["height"], state["name"],
+    def unload_data(self, canvas):
+        for state in self.data["shapes"]:
+            shape = Shape(canvas, state["width"], state["height"], state["name"],
                     state["shape"], state["x"], state["y"])
-                Shape.create_shape(shape, state["shape"])
+            shape.create_shape(state["shape"])
 
     def delete_data(self, filename):
         if os.path.exists(f"{filename}.json"):
             os.remove(f"{filename}.json")
-            messagebox.showinfo("", f"Filename '{filename}' has been deleted.")
+            return True
         else:
-            messagebox.showerror("Error", f"Filename '{filename}' not found")
+            return False
+

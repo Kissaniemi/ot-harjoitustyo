@@ -1,10 +1,10 @@
-"""
+
+class Shape:
+    """
 Shape-luokka johon talletetaan canvasilla olevien muotojen tiedot ja
 joka vastaa muodon luonnista canvasille
 
  """
-
-class Shape:
     def __init__(self, canvas, width, height, text, shape_type, top_left_x=50, top_left_y=50):
         self.canvas = canvas
         self.width = width

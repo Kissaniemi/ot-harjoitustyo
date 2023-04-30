@@ -3,7 +3,7 @@ import tkinter as tk
 
 class PopUp():
     """
-    Custom PopUp ikkunan luokka
+    Custom PopUp ikkunan luokka johon syötetään shape-objektin muutettavat tiedot (koko, nimi)
     """
 
     def __init__(self, parent, canvas, event_handler):
