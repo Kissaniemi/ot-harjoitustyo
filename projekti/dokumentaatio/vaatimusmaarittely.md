@@ -23,8 +23,6 @@ Tehty:
  - Huoneen voi tallentaa
  - Tallennetun huoneen voi hakea
  - Luodun huoneen koolla on rajat
-
-Tekemättä:
  - Tallennetun huoneen voi poistaa
   
 ### Käyttäjä voi lisätä huonepohjaan huonekaluja
@@ -41,9 +39,9 @@ Tehty:
  Tehty:
  - Luotu huonekalu voi olla ympyrän/ovaalin muotoinen
  - Valmiin huonekalun kokoa/nimeä voi muuttaa
+ - Laajennettu tallennusta
 
  Perustoiminnan jälkeen täydennettäviä ominaisuuksia:
-   - laajennetaan tallennusta
    - kopioi olemassa oleva objekti  
    - Luotu huonekalu voi olla L-muotoinen
    - Luotua huonekalua voi kiertää 
