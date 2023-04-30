@@ -80,15 +80,20 @@ class View():
         create_rectangle_button.pack(side=tk.TOP, padx=10, pady=10)
         create_oval_button.pack(side=tk.TOP, padx=10, pady=10)
 
-        save_button = tk.Button(master=self._left_frame,
-                                text="Save")
-        save_button.pack(side=tk.RIGHT, padx=20, pady=10)
-        save_button.config(command=self.save_popup)
+        delete_save_button = tk.Button(master=self._left_frame,
+                                text="Delete File")
+        delete_save_button.pack(side=tk.RIGHT, padx=10, pady=10)
+        delete_save_button.config(command=self.delete_file_popup)
 
         load_button = tk.Button(master=self._left_frame,
-                                text="Load")
+                                text="Load File")
         load_button.pack(side=tk.RIGHT, padx=10, pady=10)
         load_button.config(command=self.load_popup)
+
+        save_button = tk.Button(master=self._left_frame,
+                                text="Save File")
+        save_button.pack(side=tk.RIGHT, padx=20, pady=10)
+        save_button.config(command=self.save_popup)
 
         exit_button = tk.Button(master=self._left_frame,
                                 text="Exit")
@@ -130,41 +135,59 @@ class View():
             self._canvas.itemconfigure("text", state="normal")
 
     def save_popup(self):
-        savefile = askstring("", "Enter file name you want to save to")
-        if savefile == "":
+        filename = askstring("", "Enter file name to save to")
+        if filename == "":
             self.save_error()
-        elif savefile == None:
+        elif filename == None:
             return
         else:
-            self._save_handler.save(self._canvas, savefile)
+            self._save_handler.get_data(self._canvas, filename)
 
     def save_error(self):     
-        savefile = askstring("", "Please enter a file name to save to")
-        if savefile == "":
-            self.enter_name()
-        elif savefile == None:
+        filename = askstring("", "Please enter file name to save to")
+        if filename == "":
+            self.save_error()
+        elif filename == None:
             return
         else:
-            self._save_handler.save(self._canvas, savefile)   
+            self._save_handler.get_data(self._canvas, filename)   
     
     def load_popup(self):
-        loadfile = askstring("", "Enter name of the file you want to load from")
-        if loadfile == "":
+        filename = askstring("", "Enter file name to load from")
+        if filename == "":
             self.load_error()
-        elif loadfile == None:
+        elif filename== None:
             return
         else:
-            self._save_handler.load(self._canvas, loadfile) 
+            self._save_handler.load(self._canvas, filename) 
 
     def load_error(self):     
-        loadfile = askstring("", "Please enter a file name to load from")
-        if loadfile == "":
+        filename = askstring("", "Please enter file name to load from")
+        if filename == "":
             self.load_error()
-        elif loadfile == None:
+        elif filename == None:
             return
         else:
-            self._save_handler.load(self._canvas, loadfile)  
+            self._save_handler.load(self._canvas, filename)  
 
+    def delete_file_popup(self):
+        filename = askstring("", "Enter file name to delete")
+        if filename == "":
+            self.delete_file_error()
+        elif filename == None:
+            return
+        else:
+            self._save_handler.delete_data(filename)
+
+    def delete_file_error(self):
+        filename = askstring("", "Please enter file name to delete")
+        if filename == "":
+            self.delete_file_error()
+        elif filename == None:
+            return
+        else:
+            self._save_handler.delete_data(filename)
+                                                   
     def exit_popup(self):
         response = messagebox.askyesno(
             "", "Are you sure you want to exit the program?")
