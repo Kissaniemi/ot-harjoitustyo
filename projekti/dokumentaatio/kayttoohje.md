@@ -17,21 +17,21 @@ poetry run invoke start
 
 Sovellus avautuu suoraan pääikkunaan
 
-[aloitus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva1.png)
+![aloitus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva1.png)
 
 
 Objektin luonti
 
-[luonti](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva2.png)
+![luonti](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva2.png)
 
 Näkyvät tekstit saa pois käytöstä
 
-[tekstit](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva5.png)
+![tekstit](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva5.png)
 
 Jo luodun objektin muuttaminen ja/tai poistaminen
 
-[muutos](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva3.png)
+![muutos](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva3.png)
 
 Tallentaminen ja lataus
 
-[tallennus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva4.png)
+![tallennus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva4.png)
