@@ -18,7 +18,7 @@ Kyseessä on tekijän ensimmäinen sovellusprojekti.
 - [käyttöohje](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/kayttoohje.md)
 - [koodilähteet](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/koodin_lahteet_ideat.md)
 
-# [Ohjelman releaset]
+## Ohjelman releaset
 
   [viimeisin release](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/viikko6)
   
