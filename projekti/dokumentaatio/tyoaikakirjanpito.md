@@ -125,11 +125,45 @@
 
 #### Tehty:
 - lisää koodin uudelleen järjestelyä
-- lisää testien tekemistä (eivät vieläkään toimi)
+- lisää testien tekemistä
 - dokumentaatio
 
 #### Käytetty aika:
 - 7h
 
-## Yhteensä käytetty aika: 72h
+
+### päiväys 29.4.2023:
+
+#### Tehty:
+- testien tekemistä
+- tallennuksen laajennusta
+- lisää Shape-luokan funktioita/jakaminen pienempiin funktioihin
+
+#### Käytetty aika:
+- 4h
+
+### päiväys 30.4.2023
+
+#### Tehty:
+- lisätty testejä
+- tallennuksen voi poistaa
+- jaettu SaveHandler-luokkaa pienempiin funktioihin
+- siirretty messageboxit View-luokkaan
+
+#### Käytetty aika:
+- 5h
+
+### päiväys 1.5.2023
+
+#### Tehty:
+- lisätty docstring:t
+- objektin voi viedä taakse/tuoda eteen
+- siirretty/siistitty lisää tekstin luontia muista luokista View-luokkaan
+- valitun objektin reunan väri muuttuu punaiseksi merkitsemään valittuna olemista
+- dokumentointia
+
+#### Käytetty aika:
+- 6h
+
+### Yhteensä käytetty aika: 87h
 

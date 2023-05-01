@@ -43,9 +43,9 @@
 - Lisätty teksti-objektin luominen suorakulmion luonnin yhteydessä
 - Lisätty checkbox josta canvasilla näkyvät tekstit saa näkyviin ja pois näkyvistä
 - Lisätty tallennus ja lataustoiminnot json:in avulla
-- Lisätty click_move, drag_move, release_move ja delete_rectangle funktioihin teksti-objektin käsittelyä suorakulmio-objektin rinnalla
+- Lisätty clickmove, dragmove, releasemove ja deleterectangle funktioihin teksti-objektin käsittelyä suorakulmio-objektin rinnalla
 - Poistettu self.rectangle-lista, koska sitä ei tarvitakaan
-- Muutettu "create_rectangle_function" funktio "create_rectangle"ksi ja siirretty suorakulmion luonti Rectangle-luokan funktioon "create"
+- Muutettu "createrectanglefunction" funktio "create_rectangle"ksi ja siirretty suorakulmion luonti Rectangle-luokan funktioon "create"
 - Rectangle-luokkaan lisätyy: self.id = suorakulmion id, self.text = korvaa self.name:n, self.text_id = teksti-objektin id, self._x, self._y = suorakulmion kulman koordinaatti
 - Otettu tag:it käyttöön suorakulmio-objektiin ja teksti-objektiin  
 - Jaettu koodi kolmeen eri luokkaan ja tiedostoon, class UI, class Rectangle, class EventHandler
@@ -83,10 +83,33 @@
 - Eriytetty koodia enemmän ja muutettu pakkausrakennetta ja samalla korjattu/muutettu 
 poistettu yksittäisiä asioita ns. siistitty koodia
 - Korjattu/poistettu testejä, koska eivät toimi 
-
+- muutettu joidenkin funktioiden nimiä kuvaamaan paremmin niiden toimintaa
 ## Seuraavaksi to do-listalla
 - Testien korjaus
 - Koodin jäsentelyn korjaus
-- useamman tallennuksen tekeminen ja tallennuksen poistaminen
-- valmiin muoto-objektin kopiointi
-- muoto-objektin kääntö
+- Useamman tallennuksen tekeminen ja tallennuksen poistaminen
+- Valmiin muoto-objektin kopiointi
+- Muoto-objektin kääntö
+
+
+### Viikko 6
+
+## Muutokset:
+
+- Lisätty mahdollisuus useamman tallennuksen luomiseen
+- Lisätty tallennetun tiedoston poistaminen
+- Lisätty Shape-luokkaan funktioita/jaettu pienempiin funktioihin
+- Jaettu SaveHandler luokkaa paremmin pienempiin funktioihin
+- Korjattu ja luotu uusia testejä
+- Lisätty Docstring:t
+- Siirretty kaikki tekstin luonti pois Control-luokasta View-luokkaan
+- Lisätty valitun objektin reunan värin muuttuminen
+- Lisätty objektin vienti taakse/eteen
+
+## Seuraavaksi to do-listalla:
+
+- Lisää ValueError testit myös PopUp luokkaan
+- View-luokasta popup-funktioiden vienti muualle/uuteen luokkaan
+- Valmiin muoto-objektin kopiointi
+- Muoto-objektin kääntö
+- Tallennukselle/Lataukselle oma ikkuna, josta näkee tämän hetkiset tiedostot
