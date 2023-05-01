@@ -3,15 +3,26 @@ import os
 
 from shapes.shape_class import Shape
 
+
 class SaveHandler():
-    """ 
-Luokka joka vastaa tallentamisesta ja latauksesta
-"""
+    """Luokka joka vastaa tallentamisesta ja latauksesta.
+
+    Attributes:
+        data: Canvasin objektien keräämiseen tarkoitettu kirjasto.
+    """
 
     def __init__(self):
-        self.data = {"shapes": []}
+        """Luokan konstruktori, joka luo uuden kirjaston."""
+        self.data = {}
 
     def get_data(self, canvas):
+        """Tyhjentää ensin nykyisen data-kirjaston ja hakee canvasilta 
+        kaikki 'shape' tyypin objektit ja 'tallentaa' ne uuteen kirjastoon.
+
+        Args: 
+            canvas: canvas, josta tiedot haetaan.
+        """
+        self.data.clear()
         self.data = {"shapes": []}
 
         shapes = canvas.find_withtag("shape")
@@ -33,13 +44,30 @@ Luokka joka vastaa tallentamisesta ja latauksesta
             })
 
     def save(self, filename):
+        """Luo/Avaa tiedostonimen mukaisen json-tiedoston 
+        ja tallentaa data-kirjaston sisällön sinne.
 
+        Args:
+            filename: tiedoston nimi johon tallennetaan.
+
+        Returns:
+            True. 
+        """
         with open(f"{filename}.json", "w", encoding="utf-8") as file:
             json.dump(self.data, file, indent=2)
 
         return True
 
     def load(self, filename):
+        """Avaa tiedostonimen mukaisen json-tiedoston 
+        ja hakee sieltä objektien tiedot data-kirjastoon.
+
+        Args:
+            filename: tiedoston nimi johon tallennetaan.
+
+        Returns:
+            True, jos lataus onnistuu, muuten False. 
+        """
         try:
             with open(f"{filename}.json", "r", encoding="utf-8") as file:
                 self.data = json.load(file)
@@ -49,12 +77,26 @@ Luokka joka vastaa tallentamisesta ja latauksesta
             return False
 
     def unload_data(self, canvas):
+        """Hakee data-kirjastosta tiedot ja luo Shape-luokan 
+        create_shape funktiolla objektit canvasille.
+
+        Args: 
+            canvas: canvas, jolle objektit luodaan.
+        """
         for state in self.data["shapes"]:
             shape = Shape(canvas, state["width"], state["height"], state["name"],
-                    state["shape"], state["x"], state["y"])
+                          state["shape"], state["x"], state["y"])
             shape.create_shape(state["shape"])
 
     def delete_data(self, filename):
+        """Hakee tiedostonimen mukaisen tiedoston ja jos se on olemassa, poistaa sen.
+
+        Args:
+            filename: tiedoston nimi joka poistetaan.
+
+        Returns: 
+            True, jos tiedosto löytyy ja poisto onnistuu, muuten False.
+        """
         if os.path.exists(f"{filename}.json"):
             os.remove(f"{filename}.json")
             return True

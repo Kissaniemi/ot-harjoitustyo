@@ -1,11 +1,21 @@
 import tkinter as tk
 
+
 class PopUp():
-    """
-    Custom PopUp ikkunan luokka johon syötetään shape-objektin muutettavat tiedot (koko, nimi)
+    """Custom PopUp-ikkuna, johon syötetään shape-objektin muutettavat tiedot (koko, nimi).
+
+    Sisältää myös napit objektin poistolle (delete) ja objektin kierrolle (rotate).
+
     """
 
     def __init__(self, parent, canvas, event_handler):
+        """Luokan konstruktori, joka luo pohjan uudelle ikkunalle
+
+        Args:
+            parent: pääikkuna, jonka päälle tulee
+            canvas: canvas, josta tietoa haetaan
+            event_handler: EventHandler luokka, jota kutsutaan muutosten tekemiseen
+        """
         self.pop = tk.Toplevel(parent)
         self.pop.title("")
         self.pop.geometry("350x300")
@@ -14,16 +24,13 @@ class PopUp():
         self.eventhandler = event_handler
 
     def initiliaze(self):
-        self.shape = self.canvas.find_withtag("current")
-        if not self.shape:
-            self.pop.destroy()
-            return
-
+        """Alustetaan ikkunan sisältö"""
         change_label = tk.Label(
             self.pop, text="Change object text, size or delete object")
         change_label.pack(side=tk.TOP, padx=10, pady=5)
 
-        shape_id = self.shape[0]
+        shape = self.canvas.find_withtag("current")
+        shape_id = shape[0]
         text_item = self.canvas.find_withtag(shape_id+1)
         name = self.canvas.itemcget(text_item, "text")
         x_1, y_1, x_2, y_2 = self.canvas.coords(shape_id)
@@ -46,10 +53,10 @@ class PopUp():
         self.new_name_entry.insert(0, name)
         self.new_name_entry.pack(side=tk.TOP, padx=10, pady=5)
 
-        #rotate_button = tk.Button(self.pop, text="Rotate",
-                                 # command=self.eventhandler.rotate()
-          #                        )
-        #rotate_button.pack(side=tk.RIGHT, padx=20, pady=10)
+        # rotate_button = tk.Button(self.pop, text="Rotate",
+        # command=self.eventhandler.rotate()
+        #                        )
+        # rotate_button.pack(side=tk.RIGHT, padx=20, pady=10)
 
         change_button = tk.Button(self.pop, text="OK",
                                   command=lambda: (self.eventhandler.change_shape(

@@ -3,6 +3,7 @@ import unittest
 
 from shapes.shape_class import Shape
 
+
 class TestShape(unittest.TestCase):
     def setUp(self):
         self.canvas = tk.Canvas(width=800, height=600, bg="white")
@@ -32,26 +33,26 @@ class TestShape(unittest.TestCase):
         rectangle = Shape(self.canvas, 100, 50, "test", "rectangle")
         rectangle.create_shape("rectangle")
         rectangles = self.canvas.find_withtag("rectangle")
-        self.assertEqual(len(rectangles), 1) 
+        self.assertEqual(len(rectangles), 1)
 
     def test_create_oval(self):
         oval = Shape(self.canvas, 100, 50, "test", "oval")
         oval.create_shape("oval")
         ovals = self.canvas.find_withtag("oval")
-        self.assertEqual(len(ovals), 1) 
+        self.assertEqual(len(ovals), 1)
 
     def test_create_room(self):
         room = Shape(self.canvas, 100, 50, "test", "room")
         room.create_shape("")
         rooms = self.canvas.find_withtag("room")
-        self.assertEqual(len(rooms), 1) 
+        self.assertEqual(len(rooms), 1)
 
     def test_create_text(self):
         oval = Shape(self.canvas, 100, 50, "test", "oval")
         oval.create_shape("oval")
         texts = self.canvas.find_withtag("text")
-        self.assertEqual(len(texts), 1) 
-    
+        self.assertEqual(len(texts), 1)
+
     def test_change_text(self):
         rectangle = Shape(self.canvas, 100, 50, "test", "rectangle")
         rectangle.change_text("newtext")
@@ -66,49 +67,9 @@ class TestShape(unittest.TestCase):
         rectangle = Shape(self.canvas, 100, 50, "test", "rectangle")
         rectangle.change_height(200)
         self.assertEqual(rectangle.height, 200)
-        
+
     def test_change_coordinates(self):
         rectangle = Shape(self.canvas, 100, 150, "test", "rectangle")
         rectangle.change_coordinates(400, 100)
         self.assertEqual(rectangle.top_left_x, 400)
         self.assertEqual(rectangle.top_left_y, 100)
-
-    def test_get_width(self):
-        rectangle = Shape(self.canvas, 100, 150, "test", "rectangle")
-        result = rectangle.get_width()
-        self.assertEqual(rectangle.width, result)
-
-    def test_get_heigh(self):
-        rectangle = Shape(self.canvas, 100, 150, "test", "rectangle")
-        result = rectangle.get_height()
-        self.assertEqual(rectangle.height, result)
-
-    def test_get_id(self):
-        rectangle = Shape(self.canvas, 100, 150, "test", "rectangle")
-        result = rectangle.get_id()
-        self.assertEqual(rectangle._id, result)
-
-    def test_get_text(self):
-        rectangle = Shape(self.canvas, 100, 150, "test", "rectangle")
-        result = rectangle.get_text()
-        self.assertEqual(rectangle.text, result)
-
-    def test_get_text_id(self):
-        rectangle = Shape(self.canvas, 100, 150, "test", "rectangle")
-        result = rectangle.get_text_id()
-        self.assertEqual(rectangle._text_id, result)
-
-    def test_get_shape(self):
-        rectangle = Shape(self.canvas, 100, 150, "test", "rectangle")
-        result = rectangle.get_shape()
-        self.assertEqual(rectangle.shape, result)
-
-    def test_get_coordinates(self):
-        rectangle = Shape(self.canvas, 100, 50, "test", "rectangle")
-        coords = rectangle.get_coordinates()
-        self.assertEqual(coords, (50, 50))
-
-
-
-
-

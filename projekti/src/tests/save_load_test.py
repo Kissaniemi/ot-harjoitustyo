@@ -4,6 +4,7 @@ import unittest
 from file_handler.save_load import SaveHandler
 from shapes.shape_class import Shape
 
+
 class TestSave(unittest.TestCase):
 
     def setUp(self):
@@ -15,16 +16,16 @@ class TestSave(unittest.TestCase):
         rectangle.create_shape("rectangle")
         self.handler.get_data(self.canvas)
         data = {
-        "shapes": [
-            {
-            "width": 100,
-            "height": 50,
-            "name": "test",
-            "x": 50.0,
-            "y": 50.0,
-            "shape": "rectangle"
-            }
-        ]}
+            "shapes": [
+                {
+                    "width": 100,
+                    "height": 50,
+                    "name": "test",
+                    "x": 50.0,
+                    "y": 50.0,
+                    "shape": "rectangle"
+                }
+            ]}
         self.assertEqual(self.handler.data, data)
 
     def test_unload_data(self):
@@ -34,7 +35,7 @@ class TestSave(unittest.TestCase):
         self.canvas.delete("all")
         self.handler.unload_data(self.canvas)
         rectangles = self.canvas.find_withtag("shape")
-        self.assertEqual(len(rectangles), 1) 
+        self.assertEqual(len(rectangles), 1)
 
     def test_save_data(self):
         test = self.handler.save("test")
