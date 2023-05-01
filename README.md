@@ -20,9 +20,9 @@ Kyseessä on tekijän ensimmäinen sovellusprojekti.
 
 ## Ohjelman releaset
 
-  [viimeisin release](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/viikko6)
+- [viimeisin release](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/viikko6)
   
-  [vanhempi 1.release](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/viikko5)
+- [vanhempi 1.release](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Ohjelman käynnistys
 
