@@ -2,6 +2,8 @@
 
 Koodin rakenne on vielä niin kesken, että alla olevat tiedot eivät ole lopullisia, vaan alustavia.
 
+## Käyttöliittymä
+
 Ajatus oli, että ui-tiedosto sisältäisi vain käyttöliittymästä vastaavan koodin, mutta siinä on vielä esim. ui_control.py ja sen Control-luokka, jonka idea oli vastata ikkunan oikealla olevalla canvas-alueen näkymästä ja ehkä myös pääasiassa sovelluslogiikasta. Ui_view.py:n View-luokan oli tarkoitus vastata ikkunan vasemmalla puolella olevasta "syöte, nappulat, jne"-näkymästä. Käyttöliittymän ja sovelluslogiikan erottelu on näiden osalta vielä siis kesken.
 
 View-luokassa on myös tällä hetkellä joukko message-popup- funktioita, jotka on tarkoitus siirtää erilliseen omaan luokkaansa tai
