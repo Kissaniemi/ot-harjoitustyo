@@ -47,11 +47,11 @@ Tuplaklikkaamalla oikeaa hiiren painiketta objektin saa vietyä taakse.
 
 ### Tallentaminen ja lataus
 
-Canvas-näkymän voi tallentaa klikkaamalla "Save File" nappia, jolloin ilmestyy popup-ikkuna joka kysyy tiedoston nimeä johon tiedosto tallennetaan. Tiedostot tallentuvat json-tiedostoon, joten tiedoston nimeksi riittää antaa esim. "testi" jolloin nnäkymä tallentuu "testi.json" tiedostoon.
+Canvas-näkymän voi tallentaa klikkaamalla "Save File" nappia, jolloin ilmestyy popup-ikkuna joka kysyy tiedoston nimeä johon tiedosto tallennetaan. Tiedostot tallentuvat json-tiedostoon, joten tiedoston nimeksi riittää antaa esim. "testi" jolloin näkymä tallentuu "testi.json" tiedostoon.
 
 Canvas-näkymän lataus toimii samalla lailla "Load File" napista, haetun tiedoston nimeksi riittää antaa vain "testi" jolloin se löytää "testi.json" tiedoston, jos sellainen on olemassa
 
-Ohjelmassa on lisäksi "Delete File" nappi, joka avaa tallennuksen/latauksen näköisen popup-ikkunan, nyt ohjelma poistaa syötetyn nime mukaisen json-tiedoston, jos sellainen löytyy.
+Ohjelmassa on lisäksi "Delete File" nappi, joka avaa tallennuksen/latauksen näköisen popup-ikkunan, nyt ohjelma poistaa syötetyn nimen mukaisen json-tiedoston, jos sellainen löytyy.
 
 ![tallennus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva4.png)
 
