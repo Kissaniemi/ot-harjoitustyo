@@ -24,9 +24,9 @@ Sovellus avautuu suoraan pääikkunaan.
 Pääikkunassa on vasemmalla puolella kentät joihin käyttäjä voi syöttää leveyden (width), pituuden (height) ja tekstin (text). Teksti-kentän täyttäminen ei ole pakollista. Leveys ja pituus syötteiden pitää olla isompia kuin 4 ja pienempiä kuin 2000, eivätkä ne myöskään voi olla tyhjiä.
 
 Syötteiden täytön jälkeen käyttäjä voi painaa:
-"Create Room" nappia, joka luo valkotaustaisen paksumpireunaisen suorakulmion. 
-"Create Rectangle" nappia, joka luo harmaataustaisen ohuempireunaisen suorakulmion.
-"Create Oval" nappia, joka luo harmaataustaisen ohuempireunaisen ovaalin.
+- "Create Room" nappia, joka luo valkotaustaisen paksumpireunaisen suorakulmion. 
+- "Create Rectangle" nappia, joka luo harmaataustaisen ohuempireunaisen suorakulmion.
+- "Create Oval" nappia, joka luo harmaataustaisen ohuempireunaisen ovaalin.
 luodut muodot ilmestyvät oikealla puolella olevalle valkoiselle canvas-alueelle.
 
 Canvasilla olevia muoto-objekteja voi liikuttaa klikkaamalla ja vetämällä niitä vasemmalla hiiren painikkeella.
