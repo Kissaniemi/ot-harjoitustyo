@@ -51,6 +51,18 @@ Tiedot tallennetaan json tiedostoon seuraavassa muodossa:
 }
 ```
 
+## Päätoiminnallisuus
+
+Käyttäjä kirjoittaa pääikkunan syötekenttään objektin leveyden, pituuden ja nimen (esim. width=100, height=50, text=sohva)
+ja klikkaa "create rectangle" nappia. 
+
+Napin painallus hakee kenttien tiedot ja lisää siihen nappiin liitetyn muoto-tiedon "rectangle" ja kutsuu validate_input-funktiota (shape_type, text_type, width_type, height_type)-attribuuteilla eli tässä ("rectangle", "sohva", 100, 50). Funktio tarkistaa, että annetut leveys- ja pituus-syötteet/attribuutit ovat sopivia parametrejä.
+
+Sen jälkeen validate_input alustaa Shape-luokan objektin shape = Shape(self._ canvas, width, height, text, shape_type) eli shape = Shape(self._ canvas, 100, 50, "sohva", "rectangle") ja sitten erikseen kutsuu Shape-luokan create_shape funktiota (shape, shape_type) eli (shape, "rectangle"), joka tarkistaa minkä tyyppinen muoto halutaan luoda. 
+
+Create_Shape funktio sitten kutsuu Shape-luokan create_rectangle-funktiota, joka luo canvasille suorakulmion aiemmin annettujen attribuuttien mukaan.
+Lopuksi se kutsuu myös Shape-luokan create_text-funktiota, joka luo aiemmin annettujen attribuuttien mukaan teksti-objektin, joka ilmestyy canvasille suorakulmion alle.
+
 ## Vanhentunut/Alustava pakkausrakenne
 
 ![kaavio](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/pakkasukaavio.png)
