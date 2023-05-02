@@ -27,7 +27,8 @@ Syötteiden täytön jälkeen käyttäjä voi painaa:
 - "Create Room" nappia, joka luo valkotaustaisen paksumpireunaisen suorakulmion. 
 - "Create Rectangle" nappia, joka luo harmaataustaisen ohuempireunaisen suorakulmion.
 - "Create Oval" nappia, joka luo harmaataustaisen ohuempireunaisen ovaalin.
-luodut muodot ilmestyvät oikealla puolella olevalle valkoiselle canvas-alueelle.
+
+Luodut muodot ilmestyvät oikealla puolella olevalle valkoiselle canvas-alueelle.
 
 Canvasilla olevia muoto-objekteja voi liikuttaa klikkaamalla ja vetämällä niitä vasemmalla hiiren painikkeella.
 
