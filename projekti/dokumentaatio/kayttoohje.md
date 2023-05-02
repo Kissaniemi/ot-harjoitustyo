@@ -40,7 +40,7 @@ Canvasilla näkyvät tekstit voi piilottaa "texts on/off" täpästä.
 
 Canvasille jo luotua objektia voi muuttaa kaksoisklikkaamalla niitä vasemmalla hiiren panikkeella. Tällöin ikkunan päälle aukeaa popup-ikkuna, josta valitun objektin kokoa ja nimeä voi muuttaa. Ikkunasta pystyy myös poistamaan valitun objektin. 
 
-Objektiapystyy myös tuomaan canvasilla eteen valitsemalla objekti ja klikkaamalla sitä oikealla hiiren painikkeella. 
+Objektia pystyy myös tuomaan canvasilla eteen valitsemalla objekti ja klikkaamalla sitä oikealla hiiren painikkeella. 
 Tuplaklikkaamalla oikeaa hiiren painiketta objektin saa vietyä taakse.
 
 ![muutos](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva3.png)
