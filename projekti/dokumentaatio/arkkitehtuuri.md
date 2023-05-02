@@ -19,7 +19,7 @@ Käyttäjä itse päättää minkä nimiseen json-tiedostoon canvasin näkymä t
 
 Tiedot tallennetaan json tiedostoon seuraavassa muodossa:
 
-´´´{
+```{
   "shapes": [
     {
       "width": 400.0,
@@ -47,7 +47,7 @@ Tiedot tallennetaan json tiedostoon seuraavassa muodossa:
     }
   ]
 }
-´´´
+```
 
 ## Vanhentunut/Alustava pakkausrakenne
 
