@@ -39,24 +39,24 @@ Idea kaikkien json tiedostojen etsintä: [Stackoverflow](https://stackoverflow.c
 Idea json-tiedoston etsintä os-moduulia käyttäen: [W3schools](https://www.w3schools.com/python/python_file_remove.asp)
 
 ##### Idea datalistan luomiseen:
-Ohjelmoinnin perusteet kurssi, [JSON-tiedoston lukeminen](https://ohjelmointi-22.mooc.fi/osa-7/4-datan-kasittely)
+[Ohjelmoinnin perusteet kurssi](https://ohjelmointi-22.mooc.fi/osa-7/4-datan-kasittely)
 
-Corey Schafer, [Working with JSON Data using the json Module](https://www.youtube.com/watch?v=9N6a-VLBa2I&t=1059s)
+[Corey Schafer](https://www.youtube.com/watch?v=9N6a-VLBa2I&t=1059s)
 
 [Stackoverflow](https://stackoverflow.com/questions/63025797/how-to-python-tkinter-saving-canvas-object-by-dump-all-canvas-object)
 
 #### sql_handler.py: 
 perustuu kurssin referenssisovelluksen [todo_repository.py](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/repositories/todo_repository.py)
 
-sekä erityisesti Codemy:n Database videotutoriaaleihin [#19-23.](https://www.youtube.com/watch?v=YR3h2CY21-U&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=19)
+sekä erityisesti Codemy:n [Database videotutoriaaleihin #19-23](https://www.youtube.com/watch?v=YR3h2CY21-U&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=19)
 
 ### logic_handler:
 #### canvas_handler.py:
 ##### yleisesti:
 Tagien käytön idea:
-TkDocs[Canvas](https://tkdocs.com/tutorial/canvas.html)
+TkDocs [Canvas](https://tkdocs.com/tutorial/canvas.html)
 
-TkDocs[Text](https://tkdocs.com/tutorial/text.html)
+TkDocs [Text](https://tkdocs.com/tutorial/text.html)
 
 ##### Kuinka saada valitun objektin tagit:
 Idea [Stackoverflow](https://stackoverflow.com/questions/66831149/tkinter-how-to-get-tag-name-from-clicking-on-rectangle)
@@ -76,35 +76,35 @@ Päällimäisen suorakulmion löytämisen idea:
 
 ##### def object_move:
  Alkuperäinen idea ja jatkoidea liikutteluun: 
-Codemy Drag and Drop Images With The Mouse - Python Tkinter GUI Tutorial #71 
-Stackoverflow how to select multiple objects with mouse in tkinter python gui?
+[Codemy](https://www.youtube.com/watch?v=Z4zePg2M5H8)
+[Stackoverflow](https://stackoverflow.com/questions/15738617/how-to-select-multiple-objects-with-mouse-in-tkinter-python-gui)
 
 ##### def lower_shape/lift_shape:
 Eteen ja taakse vieminen:
-https://stackoverflow.com/questions/35365828/python-tkinter-canvas-lift-and-canvas-lower-on-overlapping-buttons-does-not-wng
+[Stackoverflow](https://stackoverflow.com/questions/35365828/python-tkinter-canvas-lift-and-canvas-lower-on-overlapping-buttons-does-not-w)
 
 #### shape_handler.py:
 ##### Idea muoto-objektien luontiin: 
-Codemy How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68 
+[Codemy](https://www.youtube.com/watch?v=HrK9Kmz3_9A&t=346s)
 
 ##### Idea teksti-objektin luontiin: 
-TkDocs Canvas- Item Types - Text
+[TkDocs](https://tkdocs.com/tutorial/canvas.html)
 
 ### ui:
 ##### yleisesti:
 Popup-ikkunoiden käytön idea:
-Codemy, https://www.youtube.com/watch?v=KRuUtNxOb_k&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=138
-Codemy, https://www.youtube.com/watch?v=tpwu5Zb64lQ
+[Codemy](https://www.youtube.com/watch?v=KRuUtNxOb_k&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=138)
+[Codemy](https://www.youtube.com/watch?v=tpwu5Zb64lQ)
 
 ##### Kuinka liittää napin painallukseen useamman funktio kutsu:
-https://stackoverflow.com/questions/51279570/python-tkinter-lambda-multiple-variable
+[Stackoverflow](https://stackoverflow.com/questions/51279570/python-tkinter-lambda-multiple-variable)
 
 #### canvas_view.py: 
 ##### canvaksen käyttö ja ominaisuudet yleisesti:
 TkDocs https://tkdocs.com/tutorial/canvas.html
 
 ##### canvaksen luominen kehykseen:
-Codemy How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68
+[Codemy](https://stackoverflow.com/questions/51279570/python-tkinter-lambda-multiple-variable)
 
 #### change_view.py:
 ##### def validate_input:
