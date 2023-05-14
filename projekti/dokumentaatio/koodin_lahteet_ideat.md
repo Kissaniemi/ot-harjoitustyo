@@ -9,16 +9,23 @@ Koodin kansiorakenteessa ja docstring nimissä otettu mallia kurssin [referenssi
 
 ## Koodin rakenteen mukaisessa aakkosjärjestyksessä ylimmästä kansiosta alimpaan, tarkistettu viimeksi 14.5.2023 ja käytetty sitä ennen:
 
-src:
-build.py: täysin sama kuin kurssin referenssisovelluksen build.py.
-database_connection.py: perustuu kurssin referenssisovelluksen database_connection.py.
-initialize_database.py:
-def drop_table: täysin sama kuin kurssin referenssisovelluksen initialize_database.py.
-def create_table: perustuu kurssin referenssisovelluksen initialize_database.py.
-def create_table: täysin sama kuin kurssin referenssisovelluksen initialize_database.py.
-main.py : täysin sama kuin referenssisovelluksen index.py.
-file_handler:
-json_handler.py:
+### src:
+#### build.py: 
+täysin sama kuin kurssin referenssisovelluksen [build.py.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/build.py)
+
+#### database_connection.py: 
+perustuu kurssin referenssisovelluksen [database_connection.py.]((https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/database_connection.py)
+
+#### initialize_database.py:
+def drop_table: täysin sama kuin kurssin referenssisovelluksen [initialize_database.py.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/initialize_database.py)
+def create_table: perustuu kurssin referenssisovelluksen [initialize_database.py.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/initialize_database.py)
+def create_table: täysin sama kuin kurssin referenssisovelluksen [initialize_database.py.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/initialize_database.py)
+
+##### main.py : 
+täysin sama kuin [referenssisovelluksen index.py.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/index.py)
+
+### file_handler:
+#### json_handler.py:
 def get_all_file_names: 
 kaikkien json tiedostojen etsintä: https://stackoverflow.com/questions/30539679/python-read-several-json-files-from-a-folder.
 def delete_data:
@@ -29,10 +36,11 @@ Idea datalistan luomiseen:
 Corey Schafer Python Tutorial: Working with JSON Data using the json Module 
 Stackoverflow How to Python Tkinter saving canvas object by dump all canvas object?
 
-sql_handler.py: 
+#### sql_handler.py: 
 perustuu referenssisovelluksen todo_repository.py, sekä erityisesti Codemy:n Database videotutoriaaleihin #19-23.
-logic_handler:
-canvas_handler.py:
+
+### logic_handler:
+#### canvas_handler.py:
 yleisesti:
 Tagien käytön idea:
 TkDocs Canvas - Tags T
@@ -58,7 +66,8 @@ Idea muoto-objektien luontiin:
 Codemy How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68 
 Idea teksti-objektin luontiin: 
 TkDocs Canvas- Item Types - Text
-ui:
+
+### ui:
 yleisesti:
 Popup-ikkunoiden käytön idea:
 Codemy, https://www.youtube.com/watch?v=KRuUtNxOb_k&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=138
@@ -66,12 +75,14 @@ Codemy, https://www.youtube.com/watch?v=tpwu5Zb64lQ
 
 Kuinka liittää napin painallukseen useamman funktio kutsu:
 https://stackoverflow.com/questions/51279570/python-tkinter-lambda-multiple-variable
-canvas_view.py: 
+
+#### canvas_view.py: 
 canvaksen käyttö ja ominaisuudet yleisesti:
 TkDocs https://tkdocs.com/tutorial/canvas.html
 canvaksen luominen kehykseen:
 Codemy How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68
-change_view.py:
+
+#### change_view.py:
 def validate_input:
 Validointi yleisesti:
 Codemy https://www.youtube.com/watch?v=IbpInH4q4Sg
@@ -81,13 +92,15 @@ https://www.pythonguis.com/tutorials/input-validation-tkinter/
 
 Idea integer-validointiin:
 Codemy https://www.youtube.com/watch?v=IbpInH4q4Sg&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=68
-main_view.py:
+
+#### main_view.py:
 checkboxit: 
 Idea: 
 Codemy Checkboxes With TKinter - Python Tkinter GUI Tutorial #17 ,
 TkDocs Basic Widgets - Checkbutton , 
 Stackoverflow How to hide and show canvas items on tkinter?
-ui.py: perustuu referenssisovelluksen ui.py
+
+#### ui.py: perustuu referenssisovelluksen ui.py
 popups:
 json_pop_ups.py/sql_pop_ups.py: 
 Messageboxien käytön idea: 
@@ -95,5 +108,5 @@ Codemy Message Boxes with TKinter - Python Tkinter GUI Tutorial #13
 Tutorialspoint https://www.tutorialspoint.com/how-to-get-an-entry-box-within-a-messagebox-in-tkinter
 11:49
 
-Testejä tehdessä käytetty apuna:
+### Testejä tehdessä käytetty apuna:
 Stackoverflow https://stackoverflow.com/questions/4083796/how-do-i-run-unittest-on-a-tkinter-app
