@@ -8,7 +8,7 @@ Projektin viimeisin [release](https://github.com/Kissaniemi/ot-harjoitustyo/rele
 
 poetry install
 
-### Ja alusta sovelluksen tietokanta (huom! Sovellus, eivätkä sen testit, toimi ennen tätä):
+### Ja alusta sovelluksen tietokanta (huom! Sovellus eivätkä sen testit toimi ennen tätä):
 
 poetry run invoke build
 
