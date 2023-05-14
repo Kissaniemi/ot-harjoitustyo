@@ -11,12 +11,12 @@ Kyseessä on tekijän ensimmäinen sovellusprojekti.
 
 ### **Dokumentaatio** 
 
-- [vaatimusmaarittely](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/vaatimusmaarittely.md)
-- [tyoaikakirjanpito](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/tyoaikakirjanpito.md)
-- [changelog](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/changelog.md)
 - [arkkitehtuurikuvaus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/arkkitehtuuri.md)
-- [käyttöohje](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/kayttoohje.md)
+- [changelog](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/changelog.md)
 - [koodilähteet](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/koodin_lahteet_ideat.md)
+- [käyttöohje](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/kayttoohje.md)
+- [tyoaikakirjanpito](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/tyoaikakirjanpito.md)
+- [vaatimusmaarittely](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/dokumentaatio/vaatimusmaarittely.md)
 
 ## Ohjelman releaset
 
@@ -29,6 +29,8 @@ Kyseessä on tekijän ensimmäinen sovellusprojekti.
 ### Asenna ensin ohjelman riippuvuudet:
 
 poetry install
+
+poetry run invoke build
 
 ### Käynnistä ohjelma:
 
