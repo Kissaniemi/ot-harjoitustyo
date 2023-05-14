@@ -21,7 +21,7 @@ Ohjelman käyttö on testattu Python versiolla 3.10.6
 
 ## Ohjelman releaset
 
-- [viimeisin release- loppupalautus](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/loppupalautus)
+- [viimeisin release - loppupalautus](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/loppupalautus)
 
 - [vanhempi 2.release](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/viikko6)
   
