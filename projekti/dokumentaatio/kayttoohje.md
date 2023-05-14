@@ -8,6 +8,10 @@ Projektin viimeisin [release](https://github.com/Kissaniemi/ot-harjoitustyo/rele
 
 poetry install
 
+### Ja alusta sovelluksen tietokanta (huom! Sovellus, eivätkä sen testit, toimi ennen tätä):
+
+poetry run invoke build
+
 ### Käynnistä ohjelma:
 
 poetry run invoke start
@@ -17,7 +21,7 @@ poetry run invoke start
 
 Sovellus avautuu suoraan pääikkunaan.
 
-![aloitus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva1.png)
+![aloitus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/avausruutu.png)
 
 ### Objektin luonti
 
@@ -30,30 +34,42 @@ Syötteiden täytön jälkeen käyttäjä voi painaa:
 
 Luodut muodot ilmestyvät oikealla puolella olevalle valkoiselle canvas-alueelle.
 
-Canvasilla olevia muoto-objekteja voi liikuttaa klikkaamalla ja vetämällä niitä vasemmalla hiiren painikkeella.
+![luomuoto](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/luotuobjekti.png)
+
+Canvasilla olevia muoto-objekteja voi liikuttaa klikkaamalla ja vetämällä niitä vasemmalla hiiren painikkeella. Valittu liikuteltava objekti näkyy punaisella ääriviivalla.
+
+![liiku](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/liikuttelu.png)
 
 Canvasilla näkyvät tekstit voi piilottaa "texts on/off" täpästä.
 
-![tekstit](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva5.png)
+![pois](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/tekstipois.png)
+
+Canvasilla värimaailmaa voi muuttaa "blueprint" näkymäksi "blueprint mode on/off" täpästä.
+
+![sini](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/blueprint.png)
 
 ### Jo luodun objektin muuttaminen ja/tai poistaminen
 
-Canvasille jo luotua objektia voi muuttaa kaksoisklikkaamalla niitä vasemmalla hiiren panikkeella. Tällöin ikkunan päälle aukeaa popup-ikkuna, josta valitun objektin kokoa ja nimeä voi muuttaa. Ikkunasta pystyy myös poistamaan valitun objektin. 
+Canvasille jo luotua objektia voi muuttaa klikkaamalla canvasilla näkyvästä "Change view" napista, joka vaihtaa vasemmalla olevan "CREATE SHAPE" näkymän "CHANGE SHAPE" näkymäksi. Nyt uudessa näkymässä voit valita objektin ja syöttää kentiin halutut muutokset (tai pitää jotain samana ja muuttaa vain yhtä tietoa).
 
-Objektia pystyy myös tuomaan canvasilla eteen valitsemalla objekti ja klikkaamalla sitä oikealla hiiren painikkeella. 
-Tuplaklikkaamalla oikeaa hiiren painiketta objektin saa vietyä taakse.
+Näkymästä voi myös tuoda valittua objektia canvasilla eteen tai viedä taakse. Valitun objektin voi myös poistaa "Delete" napista tai kopioida "Copy" napista. "Clear Canvas" nappi tyhjentää koko canvas näkymän. 
+Jos haluat takaisin muodon luomisnäkymään, klikkaa ylhäällä olevaa "Create view" nappia.
 
-![muutos](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva3.png)
+![muutos](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/muutos.png)
 
 ### Tallentaminen ja lataus
 
-Canvas-näkymän voi tallentaa klikkaamalla "Save File" nappia, jolloin ilmestyy popup-ikkuna joka kysyy tiedoston nimeä johon tiedosto tallennetaan. Tiedostot tallentuvat json-tiedostoon, joten tiedoston nimeksi riittää antaa esim. "testi" jolloin näkymä tallentuu "testi.json" tiedostoon.
+Canvas-näkymän voi tallentaa klikkaamalla "Save File" nappia, jolloin ilmestyy popup-ikkuna joka kysyy haluatko tallentaa json-tiedostoon vai SQL-tietokantaan. Voit myös klikata "Show all SQL save names" tai " Show all json save names" nappia, jolloin ruudulle ilmestyy ruutu joka kertaa kaikkien sen löytämien sen tyyppisten tallennusten nimet.
 
-Canvas-näkymän lataus toimii samalla lailla "Load File" napista, haetun tiedoston nimeksi riittää antaa vain "testi" jolloin se löytää "testi.json" tiedoston, jos sellainen on olemassa
+![talletus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/tallennus.png)
 
-Ohjelmassa on lisäksi "Delete File" nappi, joka avaa tallennuksen/latauksen näköisen popup-ikkunan, nyt ohjelma poistaa syötetyn nimen mukaisen json-tiedoston, jos sellainen löytyy.
+Jos klikkaat "Save to json" tai "Save to SQL" nappeja, saat uuden popupikkunan joka kysyy millä nimellä haluat tallentaa. Tiedoston nimeksi riittää antaa esim. "testi" jolloin näkymä tallentuu "testi.json" tiedostoon tai "testi" nimellä SQL-tietokantaan.
 
-![tallennus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/kayttokuva4.png)
+![muoto](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/nimimuoto.png)
+
+Canvas-näkymän lataus toimii samalla lailla "Load File" napista, haetun tiedoston nimeksi riittää antaa vain "testi" jolloin se löytää tiedoston, jos sellainen on olemassa.
+
+Ohjelmassa on lisäksi "Delete File" nappi, joka avaa tallennuksen/latauksen näköisen popup-ikkunan, nyt ohjelma poistaa syötetyn nimen mukaisen tiedoston, jos sellainen löytyy.
 
 Ohjelmasta voi poistua alhaalla olevasta "Exit" napista, joka vielä varmistaa haluatko poistua ohjelmasta.
 
