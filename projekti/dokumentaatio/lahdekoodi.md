@@ -1,4 +1,4 @@
-## Projektin koodin idea/koodilähteet
+## Projektin koodin ideat ja koodilähteet
 
 Aikaisemmin Tkinteriä käyttämättömänä suuri apu projektin alkuun pääsemisessa on ollut Youtubesta Codemy.com käyttäjän videosarja [Python GUI's With Tkinter](https://www.youtube.com/watch?v=yQSEXcf6s2I&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV) jonka oppien yhdistelmiin lähes kaikki viikko 3:n mennessä luotu koodi perustuu, varsinkin UI:n kohdalla. 
 Aluksi hyödynnetty myös kurssin ohjelmistotekniikka [TkInter ja graafisen käyttöliittymän toteutus](https://ohjelmistotekniikka-hy.github.io/python/tkinter) sivua alkuun pääsemiseen (ikkunan avaus, graafiset komponentit ja niiden asettelu, tapahtumakäsittelijät).
