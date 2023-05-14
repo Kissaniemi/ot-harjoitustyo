@@ -38,7 +38,7 @@ class SqlPopUps:
 
     def save_popup(self):
         """Tallennus popup"""
-        filename = askstring("", "Enter file name to save to")
+        filename = askstring("", "Enter save name to save to")
         if filename == "":
             self.save_popup()
         elif filename == None:
@@ -68,7 +68,7 @@ class SqlPopUps:
 
     def load_record_popup(self):
         """Latauksen popup"""
-        filename = askstring("", "Enter file name to load from")
+        filename = askstring("", "Enter save name to load from")
         if filename == "":
             self.load_record_popup()
         elif filename == None:

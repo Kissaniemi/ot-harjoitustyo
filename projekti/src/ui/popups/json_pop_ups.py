@@ -24,7 +24,7 @@ class JsonPopUps:
 
     def save_popup(self):
         """Tallennus popup"""
-        filename = askstring("", "Enter file name to save to")
+        filename = askstring("", "Enter filename to save to")
         if filename == "":
             self.save_popup()
         elif filename == None:
@@ -54,7 +54,7 @@ class JsonPopUps:
 
     def load_popup(self):
         """Latauksen popup"""
-        filename = askstring("", "Enter file name to load from")
+        filename = askstring("", "Enter filename to load from")
         if filename == "":
             self.load_popup()
         elif filename == None:
@@ -79,7 +79,7 @@ class JsonPopUps:
 
     def delete_file_popup(self):
         """Tiedoston poisto popup"""
-        filename = askstring("", "Enter file name to delete")
+        filename = askstring("", "Enter filename to delete")
         if filename == "":
             self.delete_file_popup()
         elif filename == None:
