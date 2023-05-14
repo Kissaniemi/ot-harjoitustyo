@@ -87,9 +87,6 @@ Eteen ja taakse vieminen:
 ##### Idea muoto-objektien luontiin: 
 [Codemy](https://www.youtube.com/watch?v=HrK9Kmz3_9A&t=346s)
 
-##### Idea teksti-objektin luontiin: 
-[TkDocs](https://tkdocs.com/tutorial/canvas.html)
-
 ### ui:
 ##### yleisesti:
 Popup-ikkunoiden käytön idea:
@@ -101,7 +98,7 @@ Popup-ikkunoiden käytön idea:
 
 #### canvas_view.py: 
 ##### canvaksen käyttö ja ominaisuudet yleisesti:
-TkDocs https://tkdocs.com/tutorial/canvas.html
+[TkDocs](https://tkdocs.com/tutorial/canvas.html)
 
 ##### canvaksen luominen kehykseen:
 [Codemy](https://stackoverflow.com/questions/51279570/python-tkinter-lambda-multiple-variable)
@@ -109,28 +106,30 @@ TkDocs https://tkdocs.com/tutorial/canvas.html
 #### change_view.py:
 ##### def validate_input:
 ##### Validointi yleisesti:
-Codemy https://www.youtube.com/watch?v=IbpInH4q4Sg
+[Codemy](https://www.youtube.com/watch?v=IbpInH4q4Sg)
 
 ##### Idea input validointiin exceptioneilla:
-https://www.pythonguis.com/tutorials/input-validation-tkinter/
+[PythonGUIS](https://www.youtube.com/watch?v=IbpInH4q4Sg)
 
 ##### Idea integer-validointiin:
-Codemy https://www.youtube.com/watch?v=IbpInH4q4Sg&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=68
+[Codemy](https://www.youtube.com/watch?v=IbpInH4q4Sg&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=68)
 
 #### main_view.py:
 ##### checkboxit: 
 Idea: 
-Codemy Checkboxes With TKinter - Python Tkinter GUI Tutorial #17 ,
-TkDocs Basic Widgets - Checkbutton , 
-Stackoverflow How to hide and show canvas items on tkinter?
+[Codemy](https://www.youtube.com/watch?v=4IsLwwb_yDs)
+[TkDocs](https://tkdocs.com/tutorial/widgets.html#checkbutton)
+[Stackoverflow](https://stackoverflow.com/questions/53499669/how-to-hide-and-show-canvas-items-on-tkinter)
 
-#### ui.py: perustuu referenssisovelluksen ui.py
-##### popups:
-json_pop_ups.py/sql_pop_ups.py: 
+#### ui.py: 
+perustuu referenssisovelluksen [ui.py](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/ui/ui.py)
+
+### popups:
+#### json_pop_ups.py/sql_pop_ups.py: 
 
 ##### Messageboxien käytön idea: 
-Codemy Message Boxes with TKinter - Python Tkinter GUI Tutorial #13
-Tutorialspoint https://www.tutorialspoint.com/how-to-get-an-entry-box-within-a-messagebox-in-tkinter
+[Codemy](https://www.youtube.com/watch?v=S3AaSwpb5GE)
+[Tutorialspoint](https://www.tutorialspoint.com/how-to-get-an-entry-box-within-a-messagebox-in-tkinter)
 
 ### Testejä tehdessä käytetty apuna:
-Stackoverflow https://stackoverflow.com/questions/4083796/how-do-i-run-unittest-on-a-tkinter-app
+[Stackoverflow](https://www.tutorialspoint.com/how-to-get-an-entry-box-within-a-messagebox-in-tkinter)
