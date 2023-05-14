@@ -1,43 +1,99 @@
 ## Projektin koodin idea/koodilähteet
 
-Aikaisemmin Tkinteriä käyttämättömänä suuri apu projektia tehdessä on ollut Youtubesta Codemy.com käyttäjän videosarja [Python GUI's With Tkinter](https://www.youtube.com/watch?v=yQSEXcf6s2I&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV) jonka oppien yhdistelmiin lähes kaikki viikko 3:n mennessä luoto koodi perustuu, varsinkin UI:n kohdalla. 
+Aikaisemmin Tkinteriä käyttämättömänä suuri apu projektin alkuun pääsemisessa on ollut Youtubesta Codemy.com käyttäjän videosarja [Python GUI's With Tkinter](https://www.youtube.com/watch?v=yQSEXcf6s2I&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV) jonka oppien yhdistelmiin lähes kaikki viikko 3:n mennessä luotu koodi perustuu, varsinkin UI:n kohdalla. 
 Aluksi hyödynnetty myös kurssin ohjelmistotekniikka [TkInter ja graafisen käyttöliittymän toteutus](https://ohjelmistotekniikka-hy.github.io/python/tkinter) sivua alkuun pääsemiseen (ikkunan avaus, graafiset komponentit ja niiden asettelu, tapahtumakäsittelijät).
 
 Yleisesti koodia tehdessä käytetty apuna [tkinter - Python interface to Tcl/Tk](https://docs.python.org/3/library/tkinter.html#module-tkinter) sekä erityisesti [TkDocs- Tutorial](https://tkdocs.com/tutorial/index.html) sivustoa yksittäisten tkinterin toimintojen opetteluun ja hyödyntämiseen.
 
-### Tarkemmat viikko 4 mennessä tehdyn koodin lähteet:
+Koodin kansiorakenteessa ja docstring nimissä otettu mallia kurssin [referenssisovelluksesta.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/tree/master)
 
-#### # Creates a canvas on top of the right_frame for the rectangles
-Idea: Codemy [How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68](https://www.youtube.com/watch?v=HrK9Kmz3_9A&t=346s)
+## Koodin rakenteen mukaisessa aakkosjärjestyksessä ylimmästä kansiosta alimpaan, tarkistettu viimeksi 14.5.2023 ja käytetty sitä ennen:
 
-#### #Binds the mouse events to the canvas
-Idea: Stackoverflow [how to select multiple objects with mouse in tkinter python gui?](https://stackoverflow.com/questions/15738617/how-to-select-multiple-objects-with-mouse-in-tkinter-python-gui)
+src:
+build.py: täysin sama kuin kurssin referenssisovelluksen build.py.
+database_connection.py: perustuu kurssin referenssisovelluksen database_connection.py.
+initialize_database.py:
+def drop_table: täysin sama kuin kurssin referenssisovelluksen initialize_database.py.
+def create_table: perustuu kurssin referenssisovelluksen initialize_database.py.
+def create_table: täysin sama kuin kurssin referenssisovelluksen initialize_database.py.
+main.py : täysin sama kuin referenssisovelluksen index.py.
+file_handler:
+json_handler.py:
+def get_all_file_names: 
+kaikkien json tiedostojen etsintä: https://stackoverflow.com/questions/30539679/python-read-several-json-files-from-a-folder.
+def delete_data:
+json-tiedoston etsintä os-moduulia käyttäen
+https://www.w3schools.com/python/python_file_remove.asp
+Idea datalistan luomiseen:
+ Ohjelmoinnin perusteet kurssi-Osa 7 Datan käsittely, JSON-tiedoston lukeminen 
+Corey Schafer Python Tutorial: Working with JSON Data using the json Module 
+Stackoverflow How to Python Tkinter saving canvas object by dump all canvas object?
 
-#### #checkbox to toggle names on/off
-Idea: Codemy [Checkboxes With TKinter - Python Tkinter GUI Tutorial #17](https://www.youtube.com/watch?v=4IsLwwb_yDs)
- TkDocs [Basic Widgets - Checkbutton](https://tkdocs.com/tutorial/widgets.html#checkbutton)
- Stackoverflow [How to hide and show canvas items on tkinter?](https://stackoverflow.com/questions/53499669/how-to-hide-and-show-canvas-items-on-tkinter)
+sql_handler.py: 
+perustuu referenssisovelluksen todo_repository.py, sekä erityisesti Codemy:n Database videotutoriaaleihin #19-23.
+logic_handler:
+canvas_handler.py:
+yleisesti:
+Tagien käytön idea:
+TkDocs Canvas - Tags T
+kDocs Text- Differences between Tags in Canvas and Text Widgets
+Kuinka saada valitun objektin tagit:
+Stackoverflow https://stackoverflow.com/questions/66831149/tkinter-how-to-get-tag-name-from-clicking-on-rectangle
+Canvas objektien hakemisen idea: 
+Stackoverflow Python, Tkinter: How to get the handle of all canvas objects using their IDs or tags?
+def _initiliaze.py: perustuu Stackoverflow how to select multiple objects with mouse in tkinter python gui?
+def select_object: 
+Päällimäisen suorakulmion löytämisen idea: Stackoverflow Detecting when two objects are overlapping each other in tkinter 
+Valitun objektin reunan värin vaihtaminen punaiseksi:
+https://www.tutorialspoint.com/how-to-change-the-color-of-a-tkinter-rectangle-on-clicking
+def object_move:
+ Alkuperäinen idea ja jatkoidea liikutteluun: 
+Codemy Drag and Drop Images With The Mouse - Python Tkinter GUI Tutorial #71 
+Stackoverflow how to select multiple objects with mouse in tkinter python gui?
+def lower_shape/lift_shape:
+Eteen ja taakse vieminen:
+https://stackoverflow.com/questions/35365828/python-tkinter-canvas-lift-and-canvas-lower-on-overlapping-buttons-does-not-wng
+shape_handler:
+Idea muoto-objektien luontiin: 
+Codemy How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68 
+Idea teksti-objektin luontiin: 
+TkDocs Canvas- Item Types - Text
+ui:
+yleisesti:
+Popup-ikkunoiden käytön idea:
+Codemy, https://www.youtube.com/watch?v=KRuUtNxOb_k&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=138
+Codemy, https://www.youtube.com/watch?v=tpwu5Zb64lQ
 
-#### #Find the clicked rectangle and text related to it / # Move the selected rectangle with the mouse
-Idea päällimäisen suorakulmion löytämiseen: Stackoverflow  [Detecting when two objects are overlapping each other in tkinter](https://stackoverflow.com/questions/63442273/detecting-when-two-objects-are-overlapping-each-other-in-tkinter)
-Alkuperäinen idea ja jatkoidea liikutteluun: Codemy [Drag and Drop Images With The Mouse - Python Tkinter GUI Tutorial #71](https://www.youtube.com/watch?v=Z4zePg2M5H8)
-Stackoverflow [how to select multiple objects with mouse in tkinter python gui?](https://stackoverflow.com/questions/15738617/how-to-select-multiple-objects-with-mouse-in-tkinter-python-gui)
+Kuinka liittää napin painallukseen useamman funktio kutsu:
+https://stackoverflow.com/questions/51279570/python-tkinter-lambda-multiple-variable
+canvas_view.py: 
+canvaksen käyttö ja ominaisuudet yleisesti:
+TkDocs https://tkdocs.com/tutorial/canvas.html
+canvaksen luominen kehykseen:
+Codemy How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68
+change_view.py:
+def validate_input:
+Validointi yleisesti:
+Codemy https://www.youtube.com/watch?v=IbpInH4q4Sg
 
-#### # Save to json / # Load from json
-##### # Find all rectangle objects on the canvas
-Idea: Stackoverflow [ Python, Tkinter: How to get the handle of all canvas objects using their IDs or tags?](https://stackoverflow.com/questions/34944935/python-tkinter-how-to-get-the-handle-of-all-canvas-objects-using-their-ids-or)
-##### # Create a data list of the rectangles to append to the json file
-Idea: Ohjelmoinnin perusteet kurssi-[Osa 7 Datan käsittely, JSON-tiedoston lukeminen](https://ohjelmointi-22.mooc.fi/osa-7/4-datan-kasittely)
-Corey Schafer [Python Tutorial: Working with JSON Data using the json Module](https://www.youtube.com/watch?v=9N6a-VLBa2I&t=1059s)
-Stackoverflow [How to Python Tkinter saving canvas object by dump all canvas object?](https://stackoverflow.com/questions/63025797/how-to-python-tkinter-saving-canvas-object-by-dump-all-canvas-object)
-#### # Popup to confirm you want to save/load/exit/# Saved pop up
-Idea: Codemy [Message Boxes with TKinter - Python Tkinter GUI Tutorial #13](https://www.youtube.com/watch?v=S3AaSwpb5GE)
+Idea input validointiin exceptioneilla:
+https://www.pythonguis.com/tutorials/input-validation-tkinter/
 
-#### # Function to create the rectangle and text object:
-Idea suorakulmio-objektin luontiin luontiin: Codemy[How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68](https://www.youtube.com/watch?v=HrK9Kmz3_9A&t=346s)
-Idea teksti-objektin luontiin: TkDocs [Canvas- Item Types - Text](https://tkdocs.com/tutorial/canvas.html)
+Idea integer-validointiin:
+Codemy https://www.youtube.com/watch?v=IbpInH4q4Sg&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=68
+main_view.py:
+checkboxit: 
+Idea: 
+Codemy Checkboxes With TKinter - Python Tkinter GUI Tutorial #17 ,
+TkDocs Basic Widgets - Checkbutton , 
+Stackoverflow How to hide and show canvas items on tkinter?
+ui.py: perustuu referenssisovelluksen ui.py
+popups:
+json_pop_ups.py/sql_pop_ups.py: 
+Messageboxien käytön idea: 
+Codemy Message Boxes with TKinter - Python Tkinter GUI Tutorial #13
+Tutorialspoint https://www.tutorialspoint.com/how-to-get-an-entry-box-within-a-messagebox-in-tkinter
+11:49
 
-#### Tagien hyödyntäminen:
-Idea:  TkDocs [Canvas - Tags](https://tkdocs.com/tutorial/canvas.html)
-TkDocs [Text- Differences between Tags in Canvas and Text Widgets](https://tkdocs.com/tutorial/text.html)
-
+Testejä tehdessä käytetty apuna:
+Stackoverflow https://stackoverflow.com/questions/4083796/how-do-i-run-unittest-on-a-tkinter-app
