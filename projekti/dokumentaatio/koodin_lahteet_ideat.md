@@ -59,6 +59,7 @@ sekä erityisesti Codemy:n Database videotutoriaaleihin 19-23
 #### canvas_handler.py:
 ##### yleisesti:
 Tagien käytön idea:
+
 TkDocs [Canvas](https://tkdocs.com/tutorial/canvas.html)
 
 TkDocs [Text](https://tkdocs.com/tutorial/text.html)
