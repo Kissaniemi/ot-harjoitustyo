@@ -1,16 +1,21 @@
 # Arkkitehtuurikuvaus
 
-Koodin rakenne on vielä niin kesken, että alla olevat tiedot eivät ole lopullisia, vaan alustavia.
+## Sovelluksen rakenne
 
-## Käyttöliittymä
+Sovelluksen rakenne koostuu viidestä src-kansion alaisesta kansiosta.
 
-Ajatus oli, että ui-tiedosto sisältäisi vain käyttöliittymästä vastaavan koodin, mutta siinä on vielä esim. ui_control.py ja sen Control-luokka, jonka idea oli vastata ikkunan oikealla olevalla canvas-alueen näkymästä ja ehkä myös pääasiassa sovelluslogiikasta. Ui_view.py:n View-luokan oli tarkoitus vastata ikkunan vasemmalla puolella olevasta "syöte, nappulat, jne"-näkymästä. Käyttöliittymän ja sovelluslogiikan erottelu on näiden osalta vielä siis kesken.
+![pakkauskaavio](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Kaaviot/pakkausrakenne.png)
 
-View-luokassa on myös tällä hetkellä joukko message-popup- funktioita, jotka on tarkoitus siirtää erilliseen omaan luokkaansa tai
-ui-tiedostossa olevaan pop_up_window.py:hyn, jossa on jo yksittäinen PopUp-luokka custom ikkunalle. 
+Ui ja popups-kansioissa on sovelluksen käyttöliittymästä vastaavat luokat ja logic_handler- kansiossa sovelluksen logiikasta vastaavat luokat. File_handler luokka vastaa sovelluksen pysyvän tiedon tallentamisesta json-tiedostoon ja SQL-tietokantaan. Shapes-kansiossa on sovelluksen käsittelemien muoto-objektien luokka.
 
-## Sovelluslogiikka
+## Käyttöliittymä-luokat
 
+Käyttöliittymässä on kolme eri pääasiallista näkymää ja niistä vastaavaa luokkaa, Muodon luominen (MainView), Muodon muuttaminen (ChangeView) ja Canvas-alueen näkymä (CanvasView). Canvas-alueen näkymä on koko ajan näkyvillä ikkunan oikeassa reunassa ja sitä kautta vaihdetaan ikkunan vasemman reunan näkymää "Muodon luonti" ja "Muodon muutos" näkymien välillä nappia painamalla. Canvas-näkymä kutsuu näkymää vaihtaakseen UI-luokan funktioita "show_main_view" ja "show_change_view". "Muodon muutos" näkymä kutsuu vain sovelluslogiikasta vastaavan CanvasHandler-luokan funktioita. "Muodon luonti" näkymä kutsuu CanvasHandler luokan lisäksi kahta eri talletukseen liittyvää luokkaa JsonpopUps ja SqlPopUps, joista kumpikin ovat käyttöliittymä luokkia, jotka kutsuvat sovelluslogiikan DataHandler- ja JsonHandler- tai SqlHandler-luokkia.
+
+## Sovelluslogiikka-luokat
+
+Sovelluslogiikka on pyritty eriyttämään käyttöliittymästä mahdollisimman hyvin.
+Pääasiallisesti sovelluslogiikasta vastaa CanvasHandler-luokka 
 shape-tiedostosta löytyy shape_class.py:n Shape-luokka, jonka tarkoitus on vastata canvasille ilmestyvien muoto-objektien attribuuttien tiedoista ja muutoksista. Näiden muotojen kontrollointi canvasilla tapahtuu ui_control.py:n Control-luokan kautta.
 
 
@@ -64,17 +69,8 @@ eli shape = Shape(self._ canvas, 100, 50, "sohva", "rectangle") ja sitten erikse
 Create_shape funktio sitten kutsuu Shape-luokan create_rectangle-funktiota, joka luo canvasille suorakulmion aiemmin annettujen attribuuttien mukaan.
 Lopuksi se kutsuu myös Shape-luokan create_text-funktiota, joka luo aiemmin annettujen attribuuttien mukaan teksti-objektin, joka ilmestyy canvasille suorakulmion alle.
 
-## Vanhentunut/Alustava pakkausrakenne
 
-![kaavio](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/pakkasukaavio.png)
 
-## Vanhentunut/Alustava luokkakaavio
-
-![kaavio](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/luokkakaavio.png)
-
-## Vanhentunut/Alustava sekvenssikaavio
-
-![kaavio](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/sekvenssikaavio.png)
 
 
 
