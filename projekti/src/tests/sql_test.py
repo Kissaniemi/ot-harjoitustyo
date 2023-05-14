@@ -2,6 +2,7 @@ import unittest
 
 from file_handler.sql_handler import SqlHandler
 
+
 class TestSQL(unittest.TestCase):
 
     def setUp(self):

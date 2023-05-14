@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 class ChangeView():
     """Vasemman kehyksen näkymä, johon syötetään shape-objektin 
     muutettavat tiedot (koko, nimi).

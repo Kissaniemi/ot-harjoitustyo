@@ -1,8 +1,10 @@
 from database_connection import get_database_connection
 
+
 class SqlHandler():
     """SQL tietokannasta shape tietokantaoperaatioista vastaava luokka.
     """
+
     def __init__(self):
         """Luokan konstruktori, joka alustaa uuden datalistan."""
         self._connection = get_database_connection()

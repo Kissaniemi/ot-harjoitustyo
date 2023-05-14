@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 class CanvasView:
     """Oikean kehyksen näkymä, jossa alustetaan canvas
     muiden luokkien käyttöön. Sisältää napin joka

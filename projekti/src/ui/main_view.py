@@ -4,6 +4,7 @@ from tkinter import constants
 from ui.popups.json_pop_ups import JsonPopUps
 from ui.popups.sql_pop_ups import SqlPopUps
 
+
 class MainView():
     """
     Vasemman kehyksen päänäkymä. 

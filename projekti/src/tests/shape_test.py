@@ -2,6 +2,7 @@ import unittest
 
 from shapes.shape import Shape
 
+
 class TestShape(unittest.TestCase):
 
     def test_rectangle(self):

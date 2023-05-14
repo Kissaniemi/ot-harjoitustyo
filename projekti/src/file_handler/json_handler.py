@@ -2,9 +2,11 @@ import json
 import os
 from glob import glob
 
+
 class JsonHandler():
     """Luokka joka vastaa tallentamisesta ja latauksesta.
     """
+
     def __init__(self):
         """Luokan konstruktori, joka alustaa uuden datakirjaston."""
         self.data = {}

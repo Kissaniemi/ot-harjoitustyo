@@ -6,6 +6,7 @@ from tkinter.messagebox import showinfo
 from file_handler.sql_handler import SqlHandler
 from logic_handler.data_handler import DataHandler
 
+
 class SqlPopUps:
     """Luokka, joka vastaa popup ikkunoista.
     """
@@ -102,14 +103,15 @@ class SqlPopUps:
                 else:
                     messagebox.showinfo(
                         "", f"'Error happened.")
-                    
+
     def show_all(self):
         files = self._save_handler.get_all_save_files()
         if files is False:
             messagebox.showinfo(
-                            "SQL Saves", "No saves found.")
+                "SQL Saves", "No saves found.")
             return
         files = str(files)
-        files = files.replace("[", "").replace("]", "").replace("(", "").replace(")", "")
+        files = files.replace("[", "").replace(
+            "]", "").replace("(", "").replace(")", "")
         messagebox.showinfo(
-                            "SQL Saves", f"{files}.")
+            "SQL Saves", f"{files}.")

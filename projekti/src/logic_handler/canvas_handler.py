@@ -2,6 +2,7 @@ from shapes.shape import Shape
 from logic_handler.shape_handler import ShapeHandler
 from logic_handler.coord_handler import CoordHandler
 
+
 class CanvasHandler():
     """Pääasiallinen sovelluslogiikasta vastaava luokka."""
 

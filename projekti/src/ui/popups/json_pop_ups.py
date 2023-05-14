@@ -5,6 +5,7 @@ from tkinter.messagebox import showinfo
 from file_handler.json_handler import JsonHandler
 from logic_handler.data_handler import DataHandler
 
+
 class JsonPopUps:
     """Luokka, joka vastaa popup ikkunoista.
     """
@@ -107,9 +108,9 @@ class JsonPopUps:
         files = self._save_handler.get_all_file_names()
         if files is None:
             messagebox.showinfo(
-                            "JSON Saves", "No savefiles found.")
+                "JSON Saves", "No savefiles found.")
             return
         files = str(files)
         files = files.replace("[", "").replace("]", "")
         messagebox.showinfo(
-                            "JSON Saves", f"{files}.")
+            "JSON Saves", f"{files}.")

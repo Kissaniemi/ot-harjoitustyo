@@ -2,6 +2,7 @@ import unittest
 
 from file_handler.json_handler import JsonHandler
 
+
 class TestJson(unittest.TestCase):
 
     def setUp(self):
