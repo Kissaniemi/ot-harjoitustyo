@@ -10,32 +10,44 @@ Ui ja popups-kansioissa on sovelluksen käyttöliittymästä vastaavat luokat ja
 
 ## Käyttöliittymä-luokat
 
-Käyttöliittymässä on kolme eri pääasiallista näkymää ja niistä vastaavaa luokkaa, Muodon luominen (MainView), Muodon muuttaminen (ChangeView) ja Canvas-alueen näkymä (CanvasView). Canvas-alueen näkymä on koko ajan näkyvillä ikkunan oikeassa reunassa ja sitä kautta vaihdetaan ikkunan vasemman reunan näkymää "Muodon luonti" ja "Muodon muutos" näkymien välillä nappia painamalla. Canvas-näkymä kutsuu näkymää vaihtaakseen UI-luokan funktioita "show_main_view" ja "show_change_view". "Muodon muutos" näkymä kutsuu vain sovelluslogiikasta vastaavan CanvasHandler-luokan funktioita. "Muodon luonti" näkymä kutsuu CanvasHandler luokan lisäksi kahta eri talletukseen liittyvää luokkaa JsonpopUps ja SqlPopUps, joista kumpikin ovat käyttöliittymä luokkia, jotka kutsuvat sovelluslogiikan DataHandler- ja JsonHandler- tai SqlHandler-luokkia.
+Käyttöliittymässä on kolme eri pääasiallista näkymää ja niistä vastaavaa luokkaa, Muodon luominen (MainView), Muodon muuttaminen (ChangeView) ja Canvas-alueen näkymä (CanvasView). Canvas-alueen näkymä on koko ajan näkyvillä ikkunan oikeassa reunassa ja sitä kautta vaihdetaan ikkunan vasemman reunan näkymää "Muodon luonti" ja "Muodon muutos" näkymien välillä nappia painamalla. 
+
+Canvas-näkymä kutsuu näkymää vaihtaakseen UI-luokan funktioita "show_main_view" ja "show_change_view". "Muodon muutos" näkymä kutsuu vain sovelluslogiikasta vastaavan CanvasHandler-luokan funktioita. "Muodon luonti" näkymä kutsuu CanvasHandler luokan lisäksi kahta eri talletukseen liittyvää luokkaa JsonpopUps ja SqlPopUps, joista kumpikin ovat käyttöliittymä luokkia, jotka kutsuvat sovelluslogiikan DataHandler- ja JsonHandler- tai SqlHandler-luokkia.
 
 ## Sovelluslogiikka-luokat
 
-Sovelluslogiikka on pyritty eriyttämään käyttöliittymästä mahdollisimman hyvin.
-Pääasiallisesti sovelluslogiikasta vastaa CanvasHandler-luokka 
-shape-tiedostosta löytyy shape_class.py:n Shape-luokka, jonka tarkoitus on vastata canvasille ilmestyvien muoto-objektien attribuuttien tiedoista ja muutoksista. Näiden muotojen kontrollointi canvasilla tapahtuu ui_control.py:n Control-luokan kautta.
+Sovelluslogiikka on pyritty eriyttämään käyttöliittymästä mahdollisimman hyvin, sekä jakamaan pienempiin luokkiin.
+Pääasiallisesti sovelluslogiikasta vastaa CanvasHandler-luokka ja sen funktioita on jaettu kahteen "apuluokkaan" ShapeHandler ja CoordHandler. 
+
+CanvasHandler vastaa canvasilla olevien objektien liikuttelusta, pyörittelystä ja suurimmasta osasta objekteihin liittyvistä funktioista. ShapeHandler-luokka sisältää objektien luonnista canvasille vastaavia funktioita, CoordHandler taas sisältää canvasilla olevien objektien koordinaattien muutoksista vastaavat funktiot. Funktioita voisi jakaa vielä paremmin muihin luokkiin.
+
+Näiden lisäksi on DataHandler, joka vastaa datan keräämisestä canvasilta sopivaan muotoon, joko json-tiedostoon tai SQL-tietokantaan tallennettavaksi.
+
+Shape-luokka vastaa canvasin objektien tietojen ylläpidosta ja siihen sisältyy funktioita, joilla olion attribuutteja voi muuttaa. Näitä funktioita kutsutaan CanvasHandler-luokan kautta.
+
+![luokkakaavio](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Kaaviot/Luokkakaavio.png)
 
 
 ## Tietojen tallennus
 
-file_handler-tiedoston save_load.pyn: SaveHandler-luokka vastaa sovelluksen tallennuksesta ja latauksesta sovelluksen ulkopuoliseen json-tiedostoon. 
-Käyttäjä itse päättää minkä nimiseen json-tiedostoon canvasin näkymä tallennetaan ja mistä ladataan. Käyttäjällä on lisäksi mahdollisuus poistaa json-tiedosto tiedoston nimen perusteella.
+Sovelluksen tietojen pysysväistalletuksesta vastaavat JsonHandler- ja SqlHandler-luokat. JsonHandler tallentaa tiedot
+json-tiedostoon ja SqlHandler SQLite-tietokantaan. 
+Käyttäjä itse päättää mmillä nimellä canvasin näkymä tallennetaan ja mistä näkymä ladataan. Käyttäjällä on lisäksi mahdollisuus poistaa sekä json-tiedosto, että SQLite-tietokannan talletus tiedoston nimen perusteella. Käyttäjä voi myös hakea kaikkien löytyven json-tiedostojen ja SQLite-tietokannan talletusten nimet.
 
-Tiedot tallennetaan json tiedostoon seuraavassa muodossa:
+Json-tiedostot tallentuvat sovelluksen juureen ja SQLite talletukset projekti-tiedoston juuresta löytyvään data-kansion tietokantatauluun saves.db.
 
+Tiedot tallennetaan SQLite-tietokantaan muodossa: 
+            save_name text,
+            width integer,
+            height integer,
+            text_input text,
+            x_coord integer,
+            y_coord integer,
+            shape_type text
+
+Tiedot tallennetaan json tiedostoon muodossa:
 ```{
   "shapes": [
-    {
-      "width": 400.0,
-      "height": 600.0,
-      "name": "",
-      "x": 50.0,
-      "y": 50.0,
-      "shape": "room"
-    },
     {
       "width": 150.0,
       "height": 60.0,
@@ -43,31 +55,42 @@ Tiedot tallennetaan json tiedostoon seuraavassa muodossa:
       "x": 86.0,
       "y": 77.0,
       "shape": "rectangle"
-    },
-    {
-      "width": 120.0,
-      "height": 40.0,
-      "name": "p\u00f6yt\u00e4",
-      "x": 103.0,
-      "y": 172.0,
-      "shape": "oval"
-    }
-  ]
-}
-```
+    }]}
 
 ## Päätoiminnallisuus
 
-Käyttäjä kirjoittaa pääikkunan syötekenttään objektin leveyden, pituuden ja nimen (esim. width=100, height=50, text=sohva)
-ja klikkaa "create rectangle" nappia. 
+Sovelluksen päätoiminnallisuudet ovat muoto-objektien luominen, niiden muuttaminen ja talletus. Tarkastellaan seuraavaksi sekvenssikaavio esimerkkejä näistä toiminnoista.
 
-Napin painallus hakee kenttien tiedot ja lisää siihen nappiin liitetyn muoto-tiedon "rectangle" ja kutsuu validate_input-funktiota (shape_type, text_type, width_type, height_type)-attribuuteilla eli tässä ("rectangle", "sohva", 100, 50). Funktio tarkistaa, että annetut leveys- ja pituus-syötteet/attribuutit ovat sopivia parametrejä.
+### Muoto-objektin luominen
 
-Sen jälkeen validate_input alustaa Shape-luokan objektin shape = Shape(self._ canvas, width, height, text, shape_type) 
-eli shape = Shape(self._ canvas, 100, 50, "sohva", "rectangle") ja sitten erikseen kutsuu Shape-luokan create_shape funktiota (shape, shape_type) eli (shape, "rectangle"), joka tarkistaa minkä tyyppinen muoto halutaan luoda. 
+Käyttäjä kirjoittaa MainView näkymän syötekenttään objektin leveyden, pituuden ja nimen (esim. width=100, height=50, text=tuoli)
+ja klikkaa "create rectangle" nappia. Sitä ennen sovelluksen käynnistyksen yhteydessä UI-luokka on luonut CanvasView-, CanvasHandler- ja Mainview-luokat. CanvasView luokassa on alkuperäinen canvas, jolle luotu muoto lopulta ilmestyy.
 
-Create_shape funktio sitten kutsuu Shape-luokan create_rectangle-funktiota, joka luo canvasille suorakulmion aiemmin annettujen attribuuttien mukaan.
-Lopuksi se kutsuu myös Shape-luokan create_text-funktiota, joka luo aiemmin annettujen attribuuttien mukaan teksti-objektin, joka ilmestyy canvasille suorakulmion alle.
+![luomuoto](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Kaaviot/Create%20Rectangle%20object.png)
+
+Napin painallus hakee kenttien tiedot ja lisää siihen nappiin liitetyn muoto-tiedon "rectangle" ja kutsuu validate_input-funktiota. Funktio tarkistaa, että annetut leveys- ja pituus-syöttee ovat sopivia parametrejä.
+
+Sen jälkeen validate_input kutsuu CanvasHandler-luokan funktiota create_shape(100, 50, "tuoli", "rectangle"). Create_shape funktio tarkistaa ensin kutsumalla get_current_color funktiota, mikä värimaailmaa canvasilla on sillä hetkellä asetettuna. Sen jälkeen se alustaa Shape-luokan objektin shape = Shape(100, 50, "tuoli", "rectangle") ja sitten erikseen kutsuu ShapeHandler-luokan create_shape("rectangle", "black", "white") funktiota, aikaisemmin saaduilla värimaailma tiedoilla.  Tämä luo canvasille halutun muodon. 
+
+Samalla CanvasHandler-luokan funktio create_shape kutsuu luokan create_texts(100, 50, "tuoli", "black", 50, 50)funktiota, joka create_shape funktion lailla ensin alustaa teksti-objektin Shape-luokkaan ja sitten kutsuu ShapeHandler luokan funktiota luomaan tekstit canvasille. Tämä toistuu kolme kertaa, että sekä "nimi"teksti, "leveys"teksti että "pituus"teksti saadaan luotua canvasille.
+
+### Muoto-objektin muuttaminen
+
+Käyttäjä kirjoittaa ChangeView näkymän syötekentään objektin uuden leveyden, pituuden ja nimen (esim. width=200, height=70, text=pöytä)
+ja klikkaa "Change" nappia. 
+
+![muutamuoto](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Kaaviot/Change%20Shape.png)
+
+Napin painallus hakee kenttien tiedotja kutsuu validate_input-funktiota. Funktio tarkistaa, että annetut leveys- ja pituus-syöttee ovat sopivia parametrejä.
+Sen jälkeen validate_input kutsuu CanvasHandler-luokan funktiota change_shape(200, 70, "pöytä"). Change_Shape muuttaa muoto-objektin näkymää canvasilla.
+CanvasHandler kutsuu samalla valitun muodon Shape-luokan funktioita change_width(200), change_height(70), change_text("pöytä") ja muuttaa tiedot luokkaan.
+
+### Tallennus json-tiedostoon
+
+![talletus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Kaaviot/Load%20Json%20save%20.png)
+
+
+
 
 
 
