@@ -1,4 +1,4 @@
-# Alustava vaatimusmäärittely
+# Vaatimusmäärittely
 
 ## Sovelluksen idea
 
@@ -7,10 +7,6 @@ luotuun huoneeseen.
 
 Alustavasti sovelluksella ei ole erillisiä käyttäjätilejä, mutta jatkoideana olisi
 pystyä luomaan myös käyttäjätili ja tallentamaan huoneita käyttäjätilille.
-
-![esimerkkikuva](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/esimerkkikuva.png)
-
-<sub>Karkea esimerkkikuva ideasta</sub>
 
 ## Sovelluksen perustoiminnallisuus
 
