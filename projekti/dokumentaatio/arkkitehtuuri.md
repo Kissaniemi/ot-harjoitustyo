@@ -37,14 +37,14 @@ Käyttäjä itse päättää mmillä nimellä canvasin näkymä tallennetaan ja 
 Json-tiedostot tallentuvat sovelluksen juureen ja SQLite talletukset projekti-tiedoston juuresta löytyvään data-kansion tietokantatauluun saves.db.
 
 Tiedot tallennetaan SQLite-tietokantaan muodossa: 
-            save_name text,
+```            save_name text,
             width integer,
             height integer,
             text_input text,
             x_coord integer,
             y_coord integer,
             shape_type text
-
+```
 Tiedot tallennetaan json tiedostoon muodossa:
 ```{
   "shapes": [
@@ -56,7 +56,7 @@ Tiedot tallennetaan json tiedostoon muodossa:
       "y": 77.0,
       "shape": "rectangle"
     }]}
-
+```
 ## Päätoiminnallisuus
 
 Sovelluksen päätoiminnallisuudet ovat muoto-objektien luominen, niiden muuttaminen ja talletus. Tarkastellaan seuraavaksi sekvenssikaavio esimerkkejä näistä toiminnoista.
