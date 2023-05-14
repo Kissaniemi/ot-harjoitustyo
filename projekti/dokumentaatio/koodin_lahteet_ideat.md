@@ -78,7 +78,7 @@ Stackoverflow how to select multiple objects with mouse in tkinter python gui?
 Eteen ja taakse vieminen:
 https://stackoverflow.com/questions/35365828/python-tkinter-canvas-lift-and-canvas-lower-on-overlapping-buttons-does-not-wng
 
-### shape_handler:
+#### shape_handler.py:
 ##### Idea muoto-objektien luontiin: 
 Codemy How to Draw Lines and Shapes With Canvas - Python Tkinter GUI Tutorial #68 
 
