@@ -160,10 +160,18 @@
 - objektin voi viedä taakse/tuoda eteen
 - siirretty/siistitty lisää tekstin luontia muista luokista View-luokkaan
 - valitun objektin reunan väri muuttuu punaiseksi merkitsemään valittuna olemista
-- dokumentointia
+- dokumentaatio
 
 #### Käytetty aika:
 - 6h
 
-### Yhteensä käytetty aika: 87h
+### päiväys 2.5.2023
+
+#### Tehty:
+- dokumentaatio
+
+#### Käytetty aika:
+- 2h
+
+### Yhteensä käytetty aika: 89h
 
