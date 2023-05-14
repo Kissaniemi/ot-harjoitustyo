@@ -173,8 +173,6 @@
 #### Käytetty aika:
 - 2h
 
-### Yhteensä käytetty aika: 89h
-
 ### päiväys 4.5.2023
 
 #### Tehty:
@@ -247,3 +245,6 @@ ChangeView:in
 - dokumentointi
 
 #### Käytetty aika:
+-10h
+
+### Yhteensä käytetty aika: 139h
