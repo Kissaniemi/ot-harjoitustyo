@@ -33,10 +33,10 @@ täysin sama kuin kurssin referenssisovelluksen [index.py.](https://github.com/o
 ### file_handler:
 #### json_handler.py:
 ##### def get_all_file_names: 
-kaikkien json tiedostojen etsintä: [Stackoverflow](https://stackoverflow.com/questions/30539679/python-read-several-json-files-from-a-folder)
+Idea kaikkien json tiedostojen etsintä: [Stackoverflow](https://stackoverflow.com/questions/30539679/python-read-several-json-files-from-a-folder)
 
 ##### def delete_data:
-json-tiedoston etsintä os-moduulia käyttäen: [W3schools](https://www.w3schools.com/python/python_file_remove.asp)
+Idea json-tiedoston etsintä os-moduulia käyttäen: [W3schools](https://www.w3schools.com/python/python_file_remove.asp)
 
 ##### Idea datalistan luomiseen:
 Ohjelmoinnin perusteet kurssi, [JSON-tiedoston lukeminen](https://ohjelmointi-22.mooc.fi/osa-7/4-datan-kasittely)
@@ -54,23 +54,25 @@ sekä erityisesti Codemy:n Database videotutoriaaleihin [#19-23.](https://www.yo
 #### canvas_handler.py:
 ##### yleisesti:
 Tagien käytön idea:
-TkDocs Canvas - Tags T
-kDocs Text- Differences between Tags in Canvas and Text Widgets
+TkDocs[Canvas](https://tkdocs.com/tutorial/canvas.html)
+
+TkDocs[Text](https://tkdocs.com/tutorial/text.html)
 
 ##### Kuinka saada valitun objektin tagit:
-Stackoverflow https://stackoverflow.com/questions/66831149/tkinter-how-to-get-tag-name-from-clicking-on-rectangle
+Idea [Stackoverflow](https://stackoverflow.com/questions/66831149/tkinter-how-to-get-tag-name-from-clicking-on-rectangle)
 
 ##### Canvas objektien hakemisen idea: 
-Stackoverflow Python, Tkinter: How to get the handle of all canvas objects using their IDs or tags?
+Idea [Stackoverflow](https://stackoverflow.com/questions/34944935/python-tkinter-how-to-get-the-handle-of-all-canvas-objects-using-their-ids-or)
 
 ##### def initiliaze.py: 
-perustuu Stackoverflow how to select multiple objects with mouse in tkinter python gui?
+Idea [Stackoverflow](https://stackoverflow.com/questions/15738617/how-to-select-multiple-objects-with-mouse-in-tkinter-python-gui)
 
 ##### def select_object: 
-Päällimäisen suorakulmion löytämisen idea: Stackoverflow Detecting when two objects are overlapping each other in tkinter 
+Päällimäisen suorakulmion löytämisen idea: 
+[Stackoverflow](https://stackoverflow.com/questions/63442273/detecting-when-two-objects-are-overlapping-each-other-in-tkinter)
 
 ##### Valitun objektin reunan värin vaihtaminen punaiseksi:
-https://www.tutorialspoint.com/how-to-change-the-color-of-a-tkinter-rectangle-on-clicking
+[Tutorialspoint](https://www.tutorialspoint.com/how-to-change-the-color-of-a-tkinter-rectangle-on-clicking)
 
 ##### def object_move:
  Alkuperäinen idea ja jatkoidea liikutteluun: 
