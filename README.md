@@ -27,15 +27,15 @@ Ohjelman käyttö on testattu Python versiolla 3.10.6
 
 ## Ohjelman käynnistys
 
-### Asenna ensin ohjelman riippuvuudet:
+### Asenna ensin sovelluksen riippuvuudet:
 
 poetry install
 
-### Ja alusta ohjelman tietokanta:
+### Ja alusta sovelluksen tietokanta (huom! Sovellus, eivätkä sen testit, toimi ennen tätä):
 
 poetry run invoke build
 
-### Käynnistä ohjelma:
+### Käynnistä sovellus:
 
 poetry run invoke start
 
