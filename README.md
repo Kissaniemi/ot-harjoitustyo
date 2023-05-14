@@ -33,6 +33,10 @@ Ohjelman käyttö on testattu Python versiolla 3.10.6
 
 poetry install
 
+### Lisää projekti-kansioon tyhjä "data" niminen kansio (huom! Sovelluksen alustus ei toimi ilman tätä):
+
+mkdir data
+
 ### Ja alusta sovelluksen tietokanta (huom! Sovellus, eivätkä sen testit, toimi ennen tätä):
 
 poetry run invoke build
