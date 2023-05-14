@@ -1,7 +1,14 @@
 
 class ShapeHandler:
-    def __init__(self, canvas):
+    """Muotojen luomisesta canvasille vastaava luokka.
+    """
 
+    def __init__(self, canvas):
+        """Luokan konstruktori.
+
+        Args:
+            canvas: canvas, jolle muotoja luodaan.
+        """
         self._canvas = canvas
 
     def create_rectangle(self, shape, linecolor="black", color="lightgray",):
@@ -29,7 +36,7 @@ class ShapeHandler:
         )
 
     def create_room(self, shape, linecolor="black", color="white"):
-        """Luo huone-suorakulmion."""
+        """Luo 'huone'-suorakulmion."""
         self._canvas.create_rectangle(
             shape.top_left_x, shape.top_left_y,
             shape.width+shape.top_left_x,
@@ -52,7 +59,7 @@ class ShapeHandler:
         )
 
     def create_width_text(self, shape, color="black"):
-        """Luo numerotekstiobjektin"""
+        """Luo leveystekstiobjektin"""
         self._canvas.create_text(
             shape.width/2+shape.top_left_x,
             shape.top_left_y-10,
@@ -63,7 +70,7 @@ class ShapeHandler:
         )
 
     def create_height_text(self, shape, color="black"):
-        """Luo numerotekstiobjektin"""
+        """Luo pituustekstiobjektin"""
         self._canvas.create_text(
             shape.width+shape.top_left_x+17,
             shape.top_left_y+shape.height/2,

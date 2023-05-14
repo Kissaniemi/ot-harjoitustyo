@@ -1,12 +1,11 @@
 import unittest
 
-from file_handler.json_handler import SaveHandler
-
+from file_handler.json_handler import JsonHandler
 
 class TestJson(unittest.TestCase):
 
     def setUp(self):
-        self.handler = SaveHandler()
+        self.handler = JsonHandler()
 
     def test_get_data(self):
         data = {"shapes": [{"width": 100, "height": 50,

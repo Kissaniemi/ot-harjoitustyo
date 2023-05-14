@@ -1,7 +1,7 @@
 import unittest
 import tkinter as tk
 
-from entities.shape import Shape
+from shapes.shape import Shape
 from logic_handler.canvas_handler import ShapeHandler
 
 

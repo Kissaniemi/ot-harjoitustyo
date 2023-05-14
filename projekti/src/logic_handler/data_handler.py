@@ -1,16 +1,25 @@
 
 class DataHandler:
+    """Json- ja SQL-datan keräämisestä oikeaan muotoon canvasilta
+    vastaava luokka.
+    """
+
     def __init__(self, canvas_handler):
+        """Luokan konstruktori, alustaa uuden datalistan.
+
+        Args:
+            canvas_handler: canvasin logiikasta vastaava luokka.
+        """
         self._handler = canvas_handler
         self._canvas = self._handler._canvas
         self.data = []
 
     def get_json_data(self):
-        """Tyhjentää ensin nykyisen data-kirjaston ja hakee canvasilta 
+        """Tyhjentää ensin nykyisen data-kirjaston/listan ja hakee canvasilta 
         kaikki 'shape' tyypin objektit ja 'tallentaa' ne uuteen kirjastoon.
 
-        Args: 
-            canvas: canvas, josta tiedot haetaan.
+        Returns:
+            Palauttaa kerätyn datan.
         """
         self.data.clear()
         self.data = {"shapes": []}
@@ -36,10 +45,14 @@ class DataHandler:
         return self.data
 
     def unload_json_data(self, data):
-        """Purkaa saadun datan canvasille
+        """Purkaa saadun datan canvasille.
 
         Args:
-            data: annettu data
+            data: annettu data.
+
+        Returns:
+            False, jos data-kirjasto on tyhjä,
+            True, jos datan luonti onnistuu.
         """
         if data == {}:
             return False
@@ -51,11 +64,11 @@ class DataHandler:
         return True
 
     def get_sql_data(self):
-        """Tyhjentää ensin nykyisen data-kirjaston ja hakee canvasilta 
-        kaikki 'shape' tyypin objektit ja 'tallentaa' ne uuteen kirjastoon.
+        """Tyhjentää ensin nykyisen data-kirjaston/listan ja hakee canvasilta 
+        kaikki 'shape' tyypin objektit ja 'tallentaa' ne uuteen listaan.
 
-        Args: 
-            canvas: canvas, josta tiedot haetaan.
+        Returns:
+            Palauttaa kerätyn datan.
         """
         self.data.clear()
         self.data = []
@@ -71,11 +84,22 @@ class DataHandler:
             tags = self._canvas.gettags(rect)
             self.data.append((int(width), int(height), text,
                              top_left_x, top_left_y, tags[0]))
-
         return self.data
 
     def unload_sql_data(self, data):
+        """Purkaa saadun datan canvasille.
+
+        Args:
+            data: annettu data.
+
+        Returns:
+            False, jos data-lista on tyhjä,
+            True, jos datan luonti onnistuu.
+        """
+        if data is False:
+            return False
         self._handler.clear_canvas()
         for _, item in enumerate(data):
             self._handler.create_shape(
                 item[0], item[1], item[2], item[5], item[3], item[4])
+        return True

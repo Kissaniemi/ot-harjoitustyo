@@ -1,6 +1,5 @@
 import tkinter as tk
 
-
 class ChangeView():
     """Vasemman kehyksen näkymä, johon syötetään shape-objektin 
     muutettavat tiedot (koko, nimi).
@@ -10,12 +9,11 @@ class ChangeView():
     """
 
     def __init__(self, master, canvas_handler):
-        """Luokan konstruktori, joka luo pohjan uudelle ikkunalle
+        """Luokan konstruktori, joka luo uuden käyttöliittymänäkymän.
 
         Args:
-            parent: pääikkuna, jonka päälle tulee
-            canvas: canvas, josta tietoa haetaan
-            event_handler: EventHandler luokka, jota kutsutaan muutosten tekemiseen
+            master: juuri, jonka sisään käyttöliittymä-luokka luodaan.
+            canvas_handler: canvasin logiikasta vastaava luokka.
         """
         self._root = master
         self._canvas_handler = canvas_handler
@@ -23,11 +21,12 @@ class ChangeView():
         self.selected_shape = None
 
     def _forget_frame(self):
+        """Unohdetaan kehysnäkymän pakkaus."""
         if self._left_frame != None:
             self._left_frame.pack_forget()
 
     def _initiliaze(self):
-        """Alustetaan näkymän sisältö"""
+        """Alustetaan näkymän sisältö."""
 
         self._left_frame = tk.Frame(
             master=self._root, bg="gray", width=450, height=600)

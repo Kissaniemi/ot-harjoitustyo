@@ -175,3 +175,75 @@
 
 ### Yhteensä käytetty aika: 89h
 
+### päiväys 4.5.2023
+
+#### Tehty:
+- lisätty lista objektitiedoille
+- lisätty objektin kääntäminen
+
+#### Käytetty aika:
+- 3h
+
+### päiväys 5.5.2023
+
+#### Tehty:
+- vaihdettu taakse/eteen vienti ikkunan napeista tapahtuvaksi
+- muutettu muodon vaihto popup-ikkuna kehykseen tulevaksi näkymäksi
+- tehty UI-luokka, joka hoitaa vasemman kehyksen näkymän vaihtamisen
+- lisätty error_label ChangeView-luokkaan
+
+#### Käytetty aika
+- 8h
+
+### päiväys 6.5.2023
+
+#### Tehty:
+- lisätty float-lukujen pyöristys kokonaisluvuiksi 
+- korjattu ettei tule valuerroria jos yrittää klikata/siirtää tekstiobjektia
+- poistettu tuplaklikkaus
+- muutettu niin että heti klikkaamalla objektia, vasemman kehyksen näkymä muuttuu
+ChangeView:in
+- SQL kertausta
+
+#### Käytetty aika:
+- 8h
+
+### päiväys 7.5.2023
+
+#### Tehty:
+- kerrattu lisää SQL-tietokannan käyttöä ja tekemistä
+- aloitettu SQL-tietokannan lisäys
+
+#### Käytetty aika:
+- 5h
+
+
+### päiväys 12.5.2023
+
+#### Tehty:
+- SQL-tietokantaan ja sen käsittelyyn liittyvän koodin luomista
+- lisätty referenssisovelluksen SQL-tietokannan käsittelyn mukaiset funktiot
+- lisätty omat popup:t SQL-tietokannan talletusten käsittelyyn
+- testien lisäämistä
+
+#### Käytetty aika:
+- 8h
+
+### päiväys 13.5.2023
+
+#### Tehty:
+- lisätty testikattavuutta
+- korjattu ja lisätty docstring:t muutosten mukaisiksi
+- yleisesti siistitty ja viimeistelty koodia
+- jaettu CanvasHandler-luokan funktioita osiin ja siirretty uusiin luokkiin
+
+#### Käytetty aika:
+- 8h
+
+### päiväys 14.5.2023
+
+#### Tehty:
+- viimeistelty koodia
+- dokumentointi
+
+#### Käytetty aika:

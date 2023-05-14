@@ -1,16 +1,12 @@
 import json
 import os
+from glob import glob
 
-
-class SaveHandler():
+class JsonHandler():
     """Luokka joka vastaa tallentamisesta ja latauksesta.
-
-    Attributes:
-        data: Canvasin objektien keräämiseen tarkoitettu kirjasto.
     """
-
     def __init__(self):
-        """Luokan konstruktori, joka alustaa uuden datan."""
+        """Luokan konstruktori, joka alustaa uuden datakirjaston."""
         self.data = {}
 
     def add_data(self, data):
@@ -77,3 +73,14 @@ class SaveHandler():
             return True
 
         return False
+
+    def get_all_file_names(self):
+        content = []
+
+        json_pattern = "*.json"
+        file_list = glob(json_pattern)
+        for file in file_list:
+            content.append((file))
+        if not content:
+            return None
+        return content

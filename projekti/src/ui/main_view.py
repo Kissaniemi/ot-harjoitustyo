@@ -1,13 +1,16 @@
 import tkinter as tk
 from tkinter import constants
 
-from ui.popups.json_pop_ups import PopUps
-from ui.popups.sql_pop_ups import SQLPopUps
-
+from ui.popups.json_pop_ups import JsonPopUps
+from ui.popups.sql_pop_ups import SqlPopUps
 
 class MainView():
     """
-    Ohjelman päänäkymä.
+    Vasemman kehyksen päänäkymä. 
+
+    Sisältä napit objektien luonnille, tallennusten käsittelyille
+    ja ohjelmasta poistumiselle, sekä checkboxit canvasin tekstien
+    ja värimaailman muuttamiselle.
     """
 
     def __init__(self, master, canvas_handler):
@@ -15,9 +18,7 @@ class MainView():
 
         Args:
             master: juuri, jonka sisään käyttöliittymä-luokka luodaan.
-            frame: kehys, jonka sisään näkymä asetetaan.
-            canvas: canvas, jolle objekteja luodaan.
-            canvashandler: canvasista vastaava luokkanäkymä.
+            canvas_handler: canvasin logiikasta vastaava luokka.
         """
         self._root = master
         self._canvas_handler = canvas_handler
@@ -28,6 +29,7 @@ class MainView():
         self._error_label = None
 
     def _forget_frame(self):
+        """Unohdetaan kehysnäkymän pakkaus."""
         if self._left_frame != None:
             self._left_frame.pack_forget()
 
@@ -40,13 +42,14 @@ class MainView():
         self._left_frame.pack_propagate(0)
         self._left_frame.pack(fill=constants.X)
 
-        self._pop_ups = PopUps(self._root, self._canvas_handler)
-        self._sql_pop_ups = SQLPopUps(self._root, self._canvas_handler)
+        self._json_pop_ups = JsonPopUps(self._root, self._canvas_handler)
+        self._sql_pop_ups = SqlPopUps(self._root, self._canvas_handler)
 
-        self._initiliaze_input_fields()
+        self._initiliaze_input_fields_labels()
         self._initiliaze_buttons()
 
     def _initiliaze_buttons(self):
+        """Alustetaan napit."""
         create_room_button = tk.Button(
             master=self._left_frame,
             text="Create Room",
@@ -84,9 +87,10 @@ class MainView():
         exit_button = tk.Button(master=self._left_frame,
                                 text="Exit")
         exit_button.pack(side=tk.LEFT, padx=20, pady=10)
-        exit_button.config(command=self._pop_ups.exit_popup)
+        exit_button.config(command=self._json_pop_ups.exit_popup)
 
-    def _initiliaze_input_fields(self):
+    def _initiliaze_input_fields_labels(self):
+        """Alustettavat syötekentät, checkboxit ja muu teksti."""
         create_label = tk.Label(master=self._left_frame,
                                 text="CREATE SHAPE",
                                 font=("Arial", 20),
@@ -141,7 +145,7 @@ class MainView():
         self._checkbox_var_2.set(state2)
 
     def choose_save(self):
-
+        """Valitse tallennustavan tyyppi (json, sql)."""
         top = tk.Toplevel(self._root)
         top.geometry("850x100")
         top.title("")
@@ -159,7 +163,7 @@ class MainView():
                                      text="Save to json")
         json_save_button.pack(side=tk.LEFT, padx=10, pady=10)
         json_save_button.config(command=lambda: (
-            top.destroy(), self._pop_ups.save_popup()))
+            top.destroy(), self._json_pop_ups.save_popup()))
 
         sql_save_button = tk.Button(master=top,
                                     text="Save to SQL")
@@ -171,16 +175,16 @@ class MainView():
                                     text="Show all json save names")
         all_json_button.pack(side=tk.RIGHT, padx=10, pady=10)
         all_json_button.config(command=lambda: (
-            top.destroy()))
+            top.destroy(), self._json_pop_ups.show_all()))
 
         all_sql_button = tk.Button(master=top,
                                    text="Show all SQL save names")
         all_sql_button.pack(side=tk.RIGHT, padx=10, pady=10)
         all_sql_button.config(command=lambda: (
-            top.destroy()))
+            top.destroy(), self._sql_pop_ups.show_all()))
 
     def choose_load(self):
-
+        """Valitse ladattavan tiedoston tyyppi (json, sql)."""
         top = tk.Toplevel(self._root)
         top.geometry("850x100")
         top.title("")
@@ -198,7 +202,7 @@ class MainView():
                                      text="Load json file")
         json_load_button.pack(side=tk.LEFT, padx=10, pady=10)
         json_load_button.config(command=lambda: (
-            top.destroy(), self._pop_ups.load_popup()))
+            top.destroy(), self._json_pop_ups.load_popup()))
 
         sql_load_button = tk.Button(master=top,
                                     text="Load SQL save")
@@ -210,16 +214,16 @@ class MainView():
                                     text="Show all json save names")
         all_json_button.pack(side=tk.RIGHT, padx=10, pady=10)
         all_json_button.config(command=lambda: (
-            top.destroy()))
+            top.destroy(), self._json_pop_ups.show_all()))
 
         all_sql_button = tk.Button(master=top,
                                    text="Show all SQL save names")
         all_sql_button.pack(side=tk.RIGHT, padx=10, pady=10)
         all_sql_button.config(command=lambda: (
-            top.destroy()))
+            top.destroy(), self._sql_pop_ups.show_all()))
 
     def choose_delete(self):
-
+        """Valitse poistettavan tiedoston tyyppi, (json, sql)."""
         top = tk.Toplevel(self._root)
         top.geometry("850x100")
         top.title("Choose savemethod")
@@ -237,7 +241,7 @@ class MainView():
                                        text="Delete json file")
         json_delete_button.pack(side=tk.LEFT, padx=10, pady=10)
         json_delete_button.config(command=lambda: (
-            top.destroy(), self._pop_ups.delete_file_popup()))
+            top.destroy(), self._json_pop_ups.delete_file_popup()))
 
         sql_delete_button = tk.Button(master=top,
                                       text="Delete from SQL record")
@@ -249,13 +253,13 @@ class MainView():
                                     text="Show all json save names")
         all_json_button.pack(side=tk.RIGHT, padx=10, pady=10)
         all_json_button.config(command=lambda: (
-            top.destroy()))
+            top.destroy(), self._json_pop_ups.show_all()))
 
         all_sql_button = tk.Button(master=top,
                                    text="Show all SQL save names")
         all_sql_button.pack(side=tk.RIGHT, padx=10, pady=10)
         all_sql_button.config(command=lambda: (
-            top.destroy()))
+            top.destroy(), self._sql_pop_ups.show_all()))
 
     def validate_input(self, shape_type):
         """Validoi, ovatko syötekentistä saadut
@@ -268,7 +272,6 @@ class MainView():
             True, jos oikeanlaisia,
             False, jos ei.
         """
-
         text = self._text_entry.get()
         width = self._width_entry.get()
         height = self._height_entry.get()

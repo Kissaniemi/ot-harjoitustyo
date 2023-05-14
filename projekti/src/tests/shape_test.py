@@ -1,7 +1,6 @@
 import unittest
 
-from entities.shape import Shape
-
+from shapes.shape import Shape
 
 class TestShape(unittest.TestCase):
 

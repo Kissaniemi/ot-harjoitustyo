@@ -4,7 +4,6 @@ import tkinter as tk
 from logic_handler.canvas_handler import CanvasHandler
 from logic_handler.data_handler import DataHandler
 
-
 class TestData(unittest.TestCase):
 
     def setUp(self):

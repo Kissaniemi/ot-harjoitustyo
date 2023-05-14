@@ -4,7 +4,6 @@ import tkinter as tk
 from logic_handler.canvas_handler import CanvasHandler
 from logic_handler.coord_handler import CoordHandler
 
-
 class TestControl(unittest.TestCase):
 
     def setUp(self):

@@ -3,7 +3,6 @@ import tkinter as tk
 
 from logic_handler.canvas_handler import CanvasHandler
 
-
 class TestEvents(unittest.TestCase):
 
     def setUp(self):

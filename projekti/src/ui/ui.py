@@ -3,8 +3,6 @@ from ui.change_view import ChangeView
 from ui.canvas_view import CanvasView
 from logic_handler.canvas_handler import CanvasHandler
 
-import tkinter as tk
-
 
 class UI:
     """Sovelluksen käyttöliittymästä vastaava luokka.
@@ -49,12 +47,11 @@ class UI:
         """
         if self._left_frame_view == self._change_view:
             self._change_view._forget_frame()
-        if self._left_frame_view == self._main_view:
+        elif self._left_frame_view == self._main_view:
             return
 
         self._left_frame_view = self._main_view
         self._main_view._initialize()
-
         self._main_view._check_state()
 
     def _show_change_view(self):

@@ -1,12 +1,11 @@
 import unittest
 
-from file_handler.sql_handler import SQLHandler
-
+from file_handler.sql_handler import SqlHandler
 
 class TestSQL(unittest.TestCase):
 
     def setUp(self):
-        self.handler = SQLHandler()
+        self.handler = SqlHandler()
         self.handler._delete_all_tables()
 
     def tearDown(self):

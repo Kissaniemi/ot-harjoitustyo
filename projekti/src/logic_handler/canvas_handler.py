@@ -1,19 +1,16 @@
-from entities.shape import Shape
+from shapes.shape import Shape
 from logic_handler.shape_handler import ShapeHandler
 from logic_handler.coord_handler import CoordHandler
 
-
 class CanvasHandler():
-    """Sovelluslogiikasta vastaava luokka."""
+    """Pääasiallinen sovelluslogiikasta vastaava luokka."""
 
     def __init__(self, canvas):
         """Luokan konstruktori, joka luo uuden sovelluslogiikasta vastaavan palvelun.
 
         Args:
             canvas: canvas, jota käsitellään.
-            ui: olio, jolla on UI-luokalta perityt metodit.
         """
-
         self.selected_shape = None
         self._canvas = canvas
         self.offset_x = 0
@@ -37,16 +34,17 @@ class CanvasHandler():
                           self.rotate_shape)
 
     def uncheck_color(self):
+        """Tarkistaa canvasin taustan värin ja 
+        vaihtaa objektin reunaväriä sen mukaan.
+        """
         color = self._canvas.itemcget(self.selected_shape, "fill")
         if color == "#104E8B":
             self._canvas.itemconfig(self.selected_shape, outline="white")
         else:
             self._canvas.itemconfig(self.selected_shape, outline="black")
 
-    # Testattu mutta voisi vielä pätkiä
-
     def change_texts(self, width, height, text):
-        """Muuttaa/päivittää valituun muoto-objektiin
+        """Muuttaa valittuun muoto-objektiin
         liittyvien tekstiobjektien tekstit.
 
         Args:
@@ -92,27 +90,25 @@ class CanvasHandler():
             text = shape.text
 
             shape.change_all(height, width, text)
-            new_width = shape.width
-            new_height = shape.height
+            new_width = shape.height
+            new_height = shape.width
 
             texts = self.shapes[shape_id]
             texts.change_all(new_width, new_height, text)
 
             width_text = self.shapes[shape_id+1]
-            width_text.change_all(new_width, new_height, new_width)
+            width_text.change_all(new_width, new_height, new_height)
 
             height_text = self.shapes[shape_id+2]
-            height_text.change_all(new_width, new_height, new_height)
+            height_text.change_all(new_width, new_height, new_width)
 
-            self._canvas.itemconfig(shape_id+2, text=new_width)
-            self._canvas.itemconfig(shape_id+3, text=new_height)
+            self._canvas.itemconfig(shape_id+2, text=new_height)
+            self._canvas.itemconfig(shape_id+3, text=new_width)
 
             x_coord, y_coord = event.x, event.y
 
             self._coord_handler.rotate_change_coords(
                 x_coord, y_coord, shape_id, new_width, new_height)
-
-    # Testattu
 
     def release_move(self):
         """Vapauttaa valitun objektin ja siihen linkitetyn tekstin, 
@@ -121,13 +117,14 @@ class CanvasHandler():
 
     def select_object(self, event):
         """Hakee päällimmäisen klikatun objektin ja asettaa
-        sen valituksi objektiksi (värittää reunat punaiseksi).
+        sen valituksi objektiksi (muuttaa reunavärin punaiseksi).
 
         Args:
             event: vasemman hiiren klikkaus.
         """
         tags = self._canvas.gettags("current")
         if "text" in tags:
+            self.uncheck_color()
             self.release_move()
             return
 
@@ -176,6 +173,12 @@ class CanvasHandler():
                               new_x1 - start_x1, new_y1 - start_y1)
 
     def get_all(self):
+        """Hakeee valitun objektin koordinaatit ja tekstin.
+
+        Returns:
+            Tekstin ja koordinaatit, jos objekti on valittu.
+            None, jos objektia ei ole valittu.
+        """
         if self.selected_shape is not None:
             shape_id = self.selected_shape
             text_item = self._canvas.find_withtag(shape_id+1)
@@ -185,7 +188,7 @@ class CanvasHandler():
         return None
 
     def change_shape(self, width, height, text):
-        """Muuttaa/päivittää valitun objektin koon/tekstin.
+        """Muuttaa valitun objektin koon/tekstin.
 
         Args:
             width: uusi leveys.
@@ -210,7 +213,11 @@ class CanvasHandler():
         shape.change_text(text)
 
     def dark_mode(self, var):
-        """Muuttaa canvasin värimaailman."""
+        """Muuttaa canvasin värimaailman.
+
+        Args: 
+            var: checkboxin tila.
+        """
         if var is True:
             self._canvas.itemconfigure("room", fill="#104E8B", outline="white")
             self._canvas.itemconfigure(
@@ -231,7 +238,11 @@ class CanvasHandler():
             self._canvas.configure(bg="white")
 
     def texts_on_off(self, var):
-        """Piilottaa/näyttää teksti-objektit canvasilla."""
+        """Piilottaa/näyttää teksti-objektit canvasilla.
+
+        Args: 
+            var: checkboxin tila.
+        """
         if var is True:
             self._canvas.itemconfigure("text", state="hidden")
         else:
@@ -315,7 +326,6 @@ class CanvasHandler():
             x_coord : x-koordinaatti, Default 50.
             y_coord : y-koordinaatti, Default 50.
         """
-
         state = self.get_current_text_state()
 
         texts = Shape(width, height,
@@ -391,7 +401,8 @@ class CanvasHandler():
         return False
 
     def delete_shape(self):
-        """Poistaa valitun objektin ja siihen liittyvät tekstit"""
+        """Poistaa valitun objektin ja siihen liittyvät tekstit
+        """
         if self.selected_shape is not None:
             for i in range(self.selected_shape, self.selected_shape+4):
                 self._canvas.delete(i)

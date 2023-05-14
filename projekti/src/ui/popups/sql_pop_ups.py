@@ -1,27 +1,25 @@
+import tkinter as tk
 from tkinter import messagebox
 from tkinter.simpledialog import askstring
 from tkinter.messagebox import showinfo
-import tkinter as tk
-from file_handler.sql_handler import SQLHandler
+
+from file_handler.sql_handler import SqlHandler
 from logic_handler.data_handler import DataHandler
 
-
-class SQLPopUps:
+class SqlPopUps:
     """Luokka, joka vastaa popup ikkunoista.
     """
 
     def __init__(self, master, canvas_handler):
-        """Luokan konstruktori. Luo pohjan popup
-
+        """Luokan konstruktori. Alustaa kutsuttavat luokat.
         Args:
             master: juuri, jonka sisään käyttöliittymä-luokka luodaan.
-
-            canvas_handler: sovelluslogiikasta vastaava luokka.
+            canvas_handler: canvasin logiikasta vastaava luokka.
         """
         self._root = master
         self._canvas_handler = canvas_handler
         self._data_handler = DataHandler(self._canvas_handler)
-        self._save_handler = SQLHandler()
+        self._save_handler = SqlHandler()
 
     def show_all_saves(self):
         top = tk.Toplevel(self._root)
@@ -33,7 +31,6 @@ class SQLPopUps:
             text_label = tk.Label(master=top,
                                   text=f"No files found")
         else:
-
             text_label = tk.Label(master=top,
                                   text=f"{files}")
         text_label.pack(side=tk.TOP, padx=10, pady=5)
@@ -51,7 +48,7 @@ class SQLPopUps:
     def save_confirm(self, filename):
         """Tallennuksen tiedostonimen tarkistus"""
         ask = self._save_handler.record_exists(filename)
-        if ask == False:
+        if ask == True:
             data = self._data_handler.get_sql_data()
             self._save_handler.add_data(data)
             self._save_handler.save(filename)
@@ -83,8 +80,7 @@ class SQLPopUps:
         ask = self._save_handler.load_record(filename)
         if ask == False:
             messagebox.showerror("Error", f"Filename '{filename}' not found.")
-        else:
-            self._data_handler.unload_sql_data(ask)
+        self._data_handler.unload_sql_data(ask)
 
     def delete_record_popup(self):
         """Tiedoston poisto popup"""
@@ -106,3 +102,14 @@ class SQLPopUps:
                 else:
                     messagebox.showinfo(
                         "", f"'Error happened.")
+                    
+    def show_all(self):
+        files = self._save_handler.get_all_save_files()
+        if files is False:
+            messagebox.showinfo(
+                            "SQL Saves", "No saves found.")
+            return
+        files = str(files)
+        files = files.replace("[", "").replace("]", "").replace("(", "").replace(")", "")
+        messagebox.showinfo(
+                            "SQL Saves", f"{files}.")

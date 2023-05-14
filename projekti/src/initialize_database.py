@@ -1,6 +1,5 @@
 from database_connection import get_database_connection
 
-
 def drop_tables(connection):
     """Poistaa tietokantataulut.
     Args:
@@ -21,7 +20,6 @@ def create_tables(connection):
     Args:
         connection: Tietokantayhteyden Connection-olio
     """
-
     cursor = connection.cursor()
 
     cursor.execute("""CREATE TABLE saves (
@@ -35,14 +33,12 @@ def create_tables(connection):
             )""")
 
     connection.commit()
-
-    # Close Connection
     connection.close()
 
 
 def initialize_database():
-    """Alustaa tietokantataulut."""
-
+    """Alustaa tietokantataulut.
+    """
     connection = get_database_connection()
 
     drop_tables(connection)

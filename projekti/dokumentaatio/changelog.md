@@ -113,3 +113,21 @@ poistettu yksittäisiä asioita ns. siistitty koodia
 - Valmiin muoto-objektin kopiointi
 - Muoto-objektin kääntö
 - Tallennukselle/Lataukselle oma ikkuna, josta näkee tämän hetkiset tiedostot
+
+
+### Viikko 7 Loppupalautus
+
+## Muutokset:
+
+- Lisätty virheiden tarkistusta
+- Yleisesti muutettu kansijärjestystä, sekä jaettu luokkia pienempiin luokkiin
+- Muutettu funktioiden ja luokkien nimiä vastaamaan paremmin niiden tehtävää
+- Muutettu "Muutos" näkymä popup-ikkunasta pääikkunan vasemman reunan näkymäksi
+- Lisätty canvas-näkymälle oma luokka
+- Muutettu näkymän vaihtuminen canvas-näkymän napista tapahtuvaksi
+- Valmiin objektin voi kopioida ja kääntää
+- Lisätty SQLite3 tietokanta
+- Lisätty SQL-tietokantaan tallennus-, lataus ja  poistomahdollisuus
+- Lisätty SQL-tietokannan tallennusten ja Json-tiedostojen nimien haku, joka 
+näyttää kaikkien tallennusten nimet
+- Jaettu CanvasHandlerista funktioita CoordHandler-, DataHandler-, Shapehandler-luokkiin
