@@ -8,6 +8,10 @@ Lataa ensin projektin viimeisin [release](https://github.com/Kissaniemi/ot-harjo
 
 poetry install
 
+### Lisää projekti-kansioon tyhjä "data" niminen kansio (huom! Sovelluksen alustus ei toimi ilman tätä):
+
+mkdir data
+
 ### Ja alusta sovelluksen tietokanta (huom! Sovellus eivätkä sen testit toimi ennen tätä):
 
 poetry run invoke build
