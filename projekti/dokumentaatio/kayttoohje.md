@@ -2,10 +2,9 @@
 
 Lataa ensin projektin viimeisin [release](https://github.com/Kissaniemi/ot-harjoitustyo/releases/tag/loppupalautus)
 
-
 ## Ennen käynnistystä
 
-### Asenna ensin ohjelman riippuvuudet:
+### Asenna ensin ohjelman riippuvuudet menemällä ladatun projektin kansioon "projekti" ja alustamalla komennolla:
 
 poetry install
 
