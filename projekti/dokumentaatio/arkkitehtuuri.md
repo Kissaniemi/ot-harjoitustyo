@@ -90,7 +90,9 @@ CanvasHandler kutsuu samalla valitun muodon Shape-luokan funktioita change_width
 ![talletus](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Kaaviot/Load%20Json%20save%20.png)
 
 
+## Sovelluksen rakenteen heikkoudet
 
+Sovellus jäi käyttöliittymän, sovelluslogiikan ja rakenteen osalta vielä turhan sekavaksi.
 
 
 
