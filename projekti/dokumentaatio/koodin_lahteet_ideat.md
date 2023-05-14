@@ -28,24 +28,24 @@ perustuu kurssin referenssisovelluksen [initialize_database.py.](https://github.
 täysin sama kuin kurssin referenssisovelluksen [initialize_database.py.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/initialize_database.py)
 
 ##### main.py : 
-täysin sama kuin [referenssisovelluksen index.py.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/index.py)
+täysin sama kuin kurssin referenssisovelluksen [index.py.](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/index.py)
 
 ### file_handler:
 #### json_handler.py:
 ##### def get_all_file_names: 
-kaikkien json tiedostojen etsintä: https://stackoverflow.com/questions/30539679/python-read-several-json-files-from-a-folder.
+kaikkien json tiedostojen etsintä: [Stackoverflow](https://stackoverflow.com/questions/30539679/python-read-several-json-files-from-a-folder)
 
 ##### def delete_data:
-json-tiedoston etsintä os-moduulia käyttäen
-https://www.w3schools.com/python/python_file_remove.asp
+json-tiedoston etsintä os-moduulia käyttäen: [W3schools](https://www.w3schools.com/python/python_file_remove.asp)
 
 ##### Idea datalistan luomiseen:
-Ohjelmoinnin perusteet kurssi-Osa 7 Datan käsittely, JSON-tiedoston lukeminen 
-Corey Schafer Python Tutorial: Working with JSON Data using the json Module 
-Stackoverflow How to Python Tkinter saving canvas object by dump all canvas object?
+Ohjelmoinnin perusteet kurssi, [JSON-tiedoston lukeminen](https://ohjelmointi-22.mooc.fi/osa-7/4-datan-kasittely)
+Corey Schafer, [Working with JSON Data using the json Module](https://www.youtube.com/watch?v=9N6a-VLBa2I&t=1059s)
+[Stackoverflow](https://stackoverflow.com/questions/63025797/how-to-python-tkinter-saving-canvas-object-by-dump-all-canvas-object)
 
 #### sql_handler.py: 
-perustuu referenssisovelluksen todo_repository.py, sekä erityisesti Codemy:n Database videotutoriaaleihin #19-23.
+perustuu kurssin referenssisovelluksen [todo_repository.py](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/repositories/todo_repository.py)
+sekä erityisesti Codemy:n Database videotutoriaaleihin [#19-23.](https://www.youtube.com/watch?v=YR3h2CY21-U&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=19)
 
 ### logic_handler:
 #### canvas_handler.py:
