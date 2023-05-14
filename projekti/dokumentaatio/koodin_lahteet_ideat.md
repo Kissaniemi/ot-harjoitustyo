@@ -81,12 +81,12 @@ Päällimäisen suorakulmion löytämisen idea:
 [Tutorialspoint](https://www.tutorialspoint.com/how-to-change-the-color-of-a-tkinter-rectangle-on-clicking)
 
 ##### def object_move:
- Alkuperäinen idea ja jatkoidea liikutteluun: 
+Alkuperäinen idea ja jatkoidea liikutteluun: 
 [Codemy](https://www.youtube.com/watch?v=Z4zePg2M5H8)
 [Stackoverflow](https://stackoverflow.com/questions/15738617/how-to-select-multiple-objects-with-mouse-in-tkinter-python-gui)
 
 ##### def lower_shape/lift_shape:
-Eteen ja taakse vieminen:
+Eteen ja taakse vieminsen idea:
 [Stackoverflow](https://stackoverflow.com/questions/35365828/python-tkinter-canvas-lift-and-canvas-lower-on-overlapping-buttons-does-not-w)
 
 #### shape_handler.py:
@@ -99,19 +99,19 @@ Popup-ikkunoiden käytön idea:
 [Codemy](https://www.youtube.com/watch?v=KRuUtNxOb_k&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=138)
 [Codemy](https://www.youtube.com/watch?v=tpwu5Zb64lQ)
 
-##### Kuinka liittää napin painallukseen useamman funktio kutsu:
+##### Idea kuinka liittää napin painallukseen useamman funktio kutsu:
 [Stackoverflow](https://stackoverflow.com/questions/51279570/python-tkinter-lambda-multiple-variable)
 
 #### canvas_view.py: 
 ##### canvaksen käyttö ja ominaisuudet yleisesti:
 [TkDocs](https://tkdocs.com/tutorial/canvas.html)
 
-##### canvaksen luominen kehykseen:
+##### Idea canvaksen luomisesta kehykseen:
 [Codemy](https://stackoverflow.com/questions/51279570/python-tkinter-lambda-multiple-variable)
 
 #### change_view.py:
 ##### def validate_input:
-##### Validointi yleisesti:
+##### Idea validointiin yleisesti:
 [Codemy](https://www.youtube.com/watch?v=IbpInH4q4Sg)
 
 ##### Idea input validointiin exceptioneilla:
@@ -121,8 +121,7 @@ Popup-ikkunoiden käytön idea:
 [Codemy](https://www.youtube.com/watch?v=IbpInH4q4Sg&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=68)
 
 #### main_view.py:
-##### checkboxit: 
-Idea: 
+##### Idea checkboxeihin: 
 [Codemy](https://www.youtube.com/watch?v=4IsLwwb_yDs)
 [TkDocs](https://tkdocs.com/tutorial/widgets.html#checkbutton)
 [Stackoverflow](https://stackoverflow.com/questions/53499669/how-to-hide-and-show-canvas-items-on-tkinter)
