@@ -48,7 +48,12 @@ Idea json-tiedoston etsintä os-moduulia käyttäen: [W3schools](https://www.w3s
 #### sql_handler.py: 
 perustuu kurssin referenssisovelluksen [todo_repository.py](https://github.com/ohjelmistotekniikka-hy/python-todo-app/blob/master/src/repositories/todo_repository.py)
 
-sekä erityisesti Codemy:n [Database videotutoriaaleihin #19-23](https://www.youtube.com/watch?v=YR3h2CY21-U&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=19)
+sekä erityisesti Codemy:n Database videotutoriaaleihin 19-23
+[19](https://www.youtube.com/watch?v=YR3h2CY21-U&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=19)
+[20](https://www.youtube.com/watch?v=AK1J8xF4fuk&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=20)
+[21](https://www.youtube.com/watch?v=c9_gcIeAru0&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=21)
+[22](https://www.youtube.com/watch?v=EAs3gr9mC9g&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=22)
+[23](https://www.youtube.com/watch?v=0Ms0-68IgTY&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=23)
 
 ### logic_handler:
 #### canvas_handler.py:
