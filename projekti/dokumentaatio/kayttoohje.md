@@ -57,6 +57,10 @@ Jos haluat takaisin muodon luomisnäkymään, klikkaa ylhäällä olevaa "Create
 
 ![muutos](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/muutos.png)
 
+Valittua objektia voi myös kääntää klikkaamalla hiiren oikealla
+
+![kierra](https://github.com/Kissaniemi/ot-harjoitustyo/blob/main/projekti/kuvat/Ohje/kaannos.png)
+
 ### Tallentaminen ja lataus
 
 Canvas-näkymän voi tallentaa klikkaamalla "Save File" nappia, jolloin ilmestyy popup-ikkuna joka kysyy haluatko tallentaa json-tiedostoon vai SQL-tietokantaan. Voit myös klikata "Show all SQL save names" tai " Show all json save names" nappia, jolloin ruudulle ilmestyy ruutu joka kertaa kaikkien sen löytämien sen tyyppisten tallennusten nimet.
